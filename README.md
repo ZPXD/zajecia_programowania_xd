@@ -1,1 +1,3 @@
-# zajecia_programowania_xd
+## Zajęcia
+
+Tu będzie info o tym repozytorium.
