@@ -39,15 +39,11 @@ PS: Kod, programy, zawartość komórek z Zajęć Programowania xD możesz kopio
 
 
 
-
-# INNE - Posprzątam tu niebawem.
-
-
-
 ### Jak zainstalować jupyter notebook.
 
-- link 1 - visual studio code, instalacja na serwerze ubuntu
-
+- Będziemy omawiać to na #007 zjaęćiach 14 lutego o 19:00.
+- Tu bedzie link jak zainstalować visual studio code, instalacja na serwerze ubuntu
+ 
 
 ### Inne info:
 
@@ -100,6 +96,7 @@ ls i naciśnij enter - pokaże Ci listę plików w miejscu gdzie jesteś.
 - Szkicowania programów (jest świetny)
 - Pozwala poruszać się po komputerze używając normalnych terminalowych komend.
 - Robienia materiałół gdzie wykorzystamy łączenie działających programów, ich kodu z tekstem i grafiką.
+
 
 
 
