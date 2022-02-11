@@ -42,7 +42,7 @@ PS: Kod, programy, zawartość komórek z Zajęć Programowania xD możesz kopio
 ### Jak zainstalować jupyter notebook.
 
 - Będziemy omawiać to na #007 zjaęćiach 14 lutego o 19:00.
-- Tu bedzie link jak zainstalować visual studio code, instalacja na serwerze ubuntu
+- Tu bedzie link jak zainstalować visual studio code, łączyć się przez ssh, używać jupytera z servera itp
  
 
 ### Inne info:
