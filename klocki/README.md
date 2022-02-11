@@ -1,6 +1,10 @@
 # Czesć
 
-### To są klocki.
+### To są klocki. 
+
+Klocki to gotowe kompletne skondensowane opracowania z których każde ogarnia pewne zagadnienie od A do Z. Klocki to takie zagadnienia jak zmienna, warunek, funkcja czy lista. Mając kilka w miarę opanowanych klocków można już budować z nich większe programy.
+
+## Jak korzystać z klocków? 
 
 #### Praktyka i nauka.
 
@@ -28,6 +32,18 @@ wrócić tu później.
 # Gotowy? Do dzieła.
 
 
+PS: Kod, programy, zawartość komórek z Zajęć Programowania xD możesz kopiować i używać go gdziekolwiek będą Ci potrzebne.
+
+
+-----------------------------
+
+
+
+
+# INNE - Posprzątam tu niebawem.
+
+
+
 ### Jak zainstalować jupyter notebook.
 
 - link 1 - visual studio code, instalacja na serwerze ubuntu
@@ -42,8 +58,48 @@ wrócić tu później.
 
 
 
+#### Zakładam, że przeszedłeś Szturm na AWS.
+
+Tam zdobyłeś server ubuntu, dowiedziałeś się jak z nim łączyć, pobrałeś teź na swój komputer VSC którym połączyłeś się ze swoim serwerem przez SSH i teraz możesz spokojnie przeglądać sobie swoje pliki na serwerze. Do tego zainstalowałeś rozszeżenie Jupyter Notebook na serwerze, dzięki czemu możesz przeglądać w VSC na swoim komputerze pliki takie jak ten. Zainstalowałeś też na serwerze git'a i pobrałeś TO repozytorium (zajecia_programowania_xd). Umiesz, korzystając z VSC wejść na swój serwer, znaleźć miejsce, gdzie pobrałeś to repozytorium, wejść do folderu **klocki** gdzie znajduje się ten plik i kliknąć w niego. Wyświetli Ci się ekran z plikiem. jeżeli możesz kliknąć w komórkę z kodem, dopisać 1 literkę między apostrofami, kliknąć enter i poniżej wyświetli się napis ze zmienioną literką, to wszystko masz gotowe i możesz ruszać dalej, zaczynać.
 
 
+#### Jeżeli powyższy akapit nie jest zgodny z prawdą, mamy 3 opcje:
+
+#### A. Jesteś początkujący. Przejdź Szturm na AWS i wróć tu ponownie. 
+
+To świetne doświadcznie no i po tym będziesz gotowy, poinstalujesz wszystko aby na spokojnie rozpocząć zajęcia programowania. Wejdź teraz: **[Szturm na AWS](https://discord.gg/Jd35hJf6ya)**.
+
+#### B. Po prostu wpadłeś a wiesz jak sobie poradzić. Przejdź dalej do Level 1.
+
+Oczywiście, że wiesz. No to super. Przejdź dalej, dobrej zabawy, nauki, powodzenia.
+
+#### C. Nie wiesz jak sobie poradzić.
+
+
+#### Spis treści:
+- a
+- b
+- c
+Przeczytaj pliku README.md w tym folderze. Tam będą informacje.
+
+
+#### Jesteś na serwerze? To co widzisz to terminal Linux'a Ubuntu.
+Linux przyjmuje różne komendy. Zobacz sam. Wpisz np:
+
+pwd i naciśnij enter - pokaże Ci ścieżkę - miejsce gdzie jesteś.
+
+ls i naciśnij enter - pokaże Ci listę plików w miejscu gdzie jesteś.
+
+# Jupyter
+
+### **Przyda nam się do:**
+- Nauki - w tym formacie będą materiały.
+- Szybkiego testowania efektów małych kawałków kodu
+- Przejrzystego eksplorowania danych tekstowych, tabel, wykresów, grafów.
+- Łatwego ogarniania kodu mając do dyspozycji kilka komórek jednocześnie 
+- Szkicowania programów (jest świetny)
+- Pozwala poruszać się po komputerze używając normalnych terminalowych komend.
+- Robienia materiałół gdzie wykorzystamy łączenie działających programów, ich kodu z tekstem i grafiką.
 
 
 
