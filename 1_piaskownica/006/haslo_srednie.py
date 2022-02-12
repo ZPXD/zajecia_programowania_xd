@@ -32,4 +32,4 @@ print()
 # 1. brał po 2 losowe cyfry/znaki i duze/male litery
 # 2. losowa kolejnosc cyfr, znakow, duzych i malych liter
 # 3. Pogłówkujcie co robic aby to dzialalo dobrze dla zadanej
-#    liczby znakow od 8 do 20 
+#    liczby znakow od 12 do 20 
