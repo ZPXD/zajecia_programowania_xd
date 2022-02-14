@@ -2,6 +2,7 @@
 #### Shuffle
 #### Shuffle list
 
+__https://stackoverflow.com/questions/49084904/r-markdown-bullet-list-with-multiple-levels__
 ```
 import random
 l = list(s)
@@ -11,7 +12,6 @@ result = ''.join(l)
 
 #### Shuffle string
 
-__https://stackoverflow.com/questions/49084904/r-markdown-bullet-list-with-multiple-levels__
 
 Shuffle string
 
