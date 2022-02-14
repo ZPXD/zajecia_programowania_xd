@@ -81,4 +81,4 @@ __https://www.freecodecamp.org/news/python-map-function-how-to-map-a-list-in-pyt
 Mapujemy funkcje na obiekty iterowalne:
 - lista (list)
 - słownik (dictionary)
-- tupa (tuple))
+- tupla (tuple))
