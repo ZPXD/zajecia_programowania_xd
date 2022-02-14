@@ -95,7 +95,7 @@ ls i naciśnij enter - pokaże Ci listę plików w miejscu gdzie jesteś.
 - Łatwego ogarniania kodu mając do dyspozycji kilka komórek jednocześnie 
 - Szkicowania programów (jest świetny)
 - Pozwala poruszać się po komputerze używając normalnych terminalowych komend.
-- Robienia materiałół gdzie wykorzystamy łączenie działających programów, ich kodu z tekstem i grafiką.
+- Robienia materiałów gdzie wykorzystamy łączenie działających programów, ich kodu z tekstem i grafiką.
 
 
 
