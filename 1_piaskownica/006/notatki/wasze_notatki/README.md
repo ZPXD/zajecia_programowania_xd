@@ -11,6 +11,8 @@ result = ''.join(l)
 
 #### Shuffle string
 
+__https://stackoverflow.com/questions/49084904/r-markdown-bullet-list-with-multiple-levels__
+
 Shuffle string
 
 ```
@@ -71,6 +73,8 @@ nfehirgsu_slftt_his
 
 ## Co mapujemy?
 ### Mapowanie funkcji
+
+__https://www.freecodecamp.org/news/python-map-function-how-to-map-a-list-in-python-3-0-with-example-code/__
 
 Mapujemy funkcje na obiekty iterowalne:
 - lista (list)
