@@ -1,8 +1,10 @@
 ## Shuffle the string
 #### Shuffle
-#### Shuffle list
 
 __https://stackoverflow.com/questions/49084904/r-markdown-bullet-list-with-multiple-levels__
+
+#### Shuffle list
+
 ```
 import random
 l = list(s)
