@@ -27,8 +27,7 @@ s="abcdef123"
 **1. External library: python-string-utils**
 
 -    first install the python-string-utils library
-```
---       pip install python_string_utils
+	-       pip install python_string_utils
 -    use string_utils.shuffle() function to shuffle string
 -    please use the below snippet for it
 
