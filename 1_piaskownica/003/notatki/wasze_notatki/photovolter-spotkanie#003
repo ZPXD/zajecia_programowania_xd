@@ -1,0 +1,25 @@
+spotkanie #003
+
+https://www.youtube.com/watch?v=Yc49pOC1kuQ
+
+# tu będzie: discord.com/channels/921389243438342164/937122855315963974 # na razie nieaktywne
+
+# T: Piaskownica Python 3
+
+Szturm na AWS - Otwarcie: środowisko
+1. Piaskownica - dla nowych
+2. Systematyzowanie wiedzy - uporządkowana wiedza
+3. Budujemy rzeczy - za 2 tygodnie
+
+#LinuxHotChallenge
+
+# Materiał
+
+linux: exit,
+koncepty: iteracja, intendation(wcięcie/tab/4spacje),
+python: lista, for, in, continue, import, split(), len(), .text
+
+
+***
+pip3 install requests
+****
