@@ -7,6 +7,7 @@ Sygnatury czasowe filmu na YT:
 YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 
 
+
 0:33 - co słychać teraz i zapowiedź tego, co będzie się działo
 9:00 - prezentacja filmiku „Etap 7 - Hiper ASAP - od gołego serwera do flagi w 15 minut”
 15:02 - koniec wprowadzenia do zajęć nr 12
