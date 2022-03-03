@@ -12,6 +12,37 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 30:30 - git clone z terminala VSC
 32:40 - git clone w VSC kliknięciami myszy
 35:24 - komendy terminala VSC do usunięcia repozytorium git (usunięcie folderu: _sudo rm -r cwiecznia-git_)
+37:03 - jak usunąć problem z klonowaniem repozytorium przez VSC (aż do 41:55) - otwieranie w nowym oknie VSC)
+42:05 - dobrą praktyką jest otwieranie nowego okna VSC dla nowego połączenia lub nowego folderu
+43:30 - git fork - omówienie na przykładzie Github-a
+44:20 - czym jest fork? Widelcowaniem :) Czyli stworzeniem własnego odgałęzienia czyjegoś projektu
+45:40 - fetch upstream - pobieranie zmian wprowadzonych w repozytorium głównym do własnego forka
+48:45 - ponowna prezentacja procedury „fetch upstream”
+51:40 - przykład dla usuniętego pliku
+52:30 - ponowne „fetch upstream” i „fetch and merge”
+54:30 - ponowne forkowanie (innego repozytorium)
+55:20 - pytanie: „jestem ahead” ;) - co robić? jak żyć? ;)
+57:00 - przykład: kopiowanie folderu lokalnego do innej lokalizacji (z linii komend terminala)
+1:00:12 - ćwiczenia git-a ciąg dalszy (level 1)
+1:00:50 - tworzenie własnego repozytorium na Githubie
+1:02:00 - nadawanie nazwy własnemu repozytorium - różne style nazewnictwa
+1:04:10 - dodawanie opisu (deskrypcji) repozytorium; ustawianie rodzaju (prywatne/publiczne), licencji i opisu w pliku README
+1:10:45 - poruszenie tematu pustego repozytorium i problemów z nim związanych
+1:13:15 - poruszanie się po własnym repozytorium w serwisie Github
+1:13:55 - co możemy zrobić z własnym repozytorium? Wysyłamy link do własnego repo :)
+1:15:00 - dodawanie plików do własnego repozytorium i ich edycja bezpośrednio w serwisie Github
+1:16:19 - VSC a Github
+1:17:00 - klonowanie własnego repozytorium na serwer za pomocą VSC
+1:19:00 - synchronizowanie zmian wykonanych w plikach edytowanych w VSC z repozytorium na Github
+1:21:00 - klikany „git stage” i „git commit” w VSC, a następnie „git push” i jego konfiguracja
+1:24:00 - „git config --global user.name "TWOJA NAZWA UŻYTKOWNIKA GITHUB-a"” i „git config --global user.email "TWOJA NAZWA KONTA E-MAIL UŻYTKOWNIKA GITHUB-a"”
+1:26:00 - ponowna prezentacja synchronizacji zmian w plikach z repozytorium na Github
+1:29:05 - instrukcja autoryzacji Github
+1:32:40 - prezentacja w terminalu (czyszczenie, tworzenie katalogu) a następnie jego dołączanie do git-a za pomocą VSC
+1:34:50 - „publish to GitHub” w VSC
+1:35:40 - jak zintegrować Git-a z VSC („authorize github”)
+1:38:42 - Szybkie powtórzenie dwóch ścieżek (1. Tworzenie repo bezpośrednio na githubie oraz 2. Tworzenie repo na VSC)
+
 
 
 
