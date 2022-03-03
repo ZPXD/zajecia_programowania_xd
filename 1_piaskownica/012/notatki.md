@@ -1,7 +1,14 @@
 012 - Python
 
+--------------------------------------------------------------------------------
+
+Sygnatury czasowe filmu na YT:
+
 YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 
+
+0:33 - co słychać teraz i zapowiedź tego, co będzie się działo
+9:00 - prezentacja filmiku „Etap 7 - Hiper ASAP - od gołego serwera do flagi w 15 minut”
 15:02 - koniec wprowadzenia do zajęć nr 12
 15:34 - określenie narzędzi potrzebych na dzisiejszą lekcję (discord, Github: repozytoria ZPXD i własne)
 17:00 - krótkie wprowadzenie do minimalnych umiejętności obsługi Git-a
@@ -42,10 +49,20 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 1:34:50 - „publish to GitHub” w VSC
 1:35:40 - jak zintegrować Git-a z VSC („authorize github”)
 1:38:42 - Szybkie powtórzenie dwóch ścieżek (1. Tworzenie repo bezpośrednio na githubie oraz 2. Tworzenie repo na VSC)
+1:43:00 - powtórzenie wcześniejszych czynności
+1:44:30 - wyjawienie tajemnicy dalszych losów repozytorium „cwiczenia-git” ;)
+1:46:00 - „Jak wrzucać zmiany ze swojego forka na repo innej osoby” - informacja o przeniesieniu prezentacji „Pull requests” na kolejne zajęcia
+1:48:30 - ćwiczenia z synchronizacji (wraz z sakramentalnymi słowami kol. Botula: „zawsze zaczynamy od git pull-a!”)
+1:52:00 - ćwiczenia z usuwania problemów pull/push
+1:54:30 - o tym, dlaczego na razie lepiej nie robić konfliktów git-a ;)
+1:58:40 - stage'owanie zmian w VSC
+2:04:19 - podsumowanie zajęć
+2:05:15 - zapowiedź PR („pull requests”) i zadanie pracy domowej :-D
+2:10:30 - ustawiajcie silne hasła na swoich serwerach, a jeszcze lepiej - włączcie logowanie kluczem, a wyłączcie logowanie hasłem na swoje serwery 
 
+----------------------------------------------------------
 
-
-
+NOTATKA z zajęć
 
 # 07.03.22 - Start II części zajęć
 - każde zajęcia - 1 mała rzecz + PR
