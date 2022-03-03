@@ -1,5 +1,11 @@
 012 - Python
 
+YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
+
+15:02 - koniec wprowadzenia
+15:34 - określenie narzędzi potrzebych na dzisiejszą lekcję (discord, Github: repozytoria ZPXD i własne)
+17:00 - krótkie wprowadzenie do minimalnych umiejętności obsługi Git-a
+
 # 07.03.22 - Start II części zajęć
 - każde zajęcia - 1 mała rzecz + PR
 - zadanie domowe - zadanie tygodniowe + PR
