@@ -1,0 +1,39 @@
+# Odc. 1 - 2022.01.22
+https://www.youtube.com/watch?v=NSDuRTK8u_g
+
+## 0-domena
+https://www.youtube.com/watch?v=NSDuRTK8u_g&t=740s
+ 
+## 2-gmail
+https://www.youtube.com/watch?v=NSDuRTK8u_g&t=880s
+
+## 0-domena cd.
+https://www.youtube.com/watch?v=NSDuRTK8u_g&t=1322s
+
+
+## 4-serwery
+https://www.youtube.com/watch?v=NSDuRTK8u_g&t=3429s
+### 3 drogi:
+∘ AWS Free Tier
+‣ https://www.youtube.com/watch?v=NSDuRTK8u_g&t=6728s
+‣ https://www.youtube.com/watch?v=NSDuRTK8u_g&t=7744s (logowanie do utworzonego Free Tier, zakładanie EC2)
+VPS server (np. na HomeCloud)
+‣ https://www.youtube.com/watch?v=NSDuRTK8u_g&t=3585s
+‣ krok po kroku: https://www.youtube.com/watch?v=NSDuRTK8u_g&t=4250s
+
+
+## 6-przypisanie_domeny
+https://www.youtube.com/watch?v=NSDuRTK8u_g&t=12522s
+
+## stawianie flagi
+
+moje-flask
+apt install git
+mkdir /var/www # <---- to w AWS trzeba zrobić a nie trzeba w VPS (większości)
+cd /var/www
+git clone https://github.com/lukasz-test/flaga.git
+cd flaga
+sudo python3 xD.py # <---- z dużej litery xD.py a nie xd.py z małej
+ litery.
+
+
