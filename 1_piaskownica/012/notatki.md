@@ -61,6 +61,7 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 2:05:15 - zapowiedź PR („pull requests”) i zadanie pracy domowej :-D
 2:10:30 - ustawiajcie silne hasła na swoich serwerach, a jeszcze lepiej - włączcie logowanie kluczem, a wyłączcie logowanie hasłem na swoje serwery 
 
+
 ----------------------------------------------------------
 
 NOTATKA z zajęć
