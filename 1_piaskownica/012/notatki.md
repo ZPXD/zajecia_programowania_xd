@@ -141,7 +141,7 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 2. Napiszemy program do sprawdzania zadań domowych
 
 3. Ogólnie - rzucimy okiem na bardziej rozbudowany kod.
-
+        
         git clone Xxxxxxxxxxxxxxxx  # na przykład:
                                 #  git clone git@github.com:ZPXD/cwiczenia-git.git
 
