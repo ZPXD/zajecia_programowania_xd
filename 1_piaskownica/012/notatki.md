@@ -143,14 +143,14 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 3. Ogólnie - rzucimy okiem na bardziej rozbudowany kod.
         
         git clone Xxxxxxxxxxxxxxxx  # na przykład:
-                                #  git clone git@github.com:ZPXD/cwiczenia-git.git
+                                    # git clone git@github.com:ZPXD/cwiczenia-git.git
 
 4. Kod z zajęć:
 
 4.1. Szybkie rozpoczęcie pracy z git-em:
 
     cd Xxxxxxxxxxxxxxxx         # przechodzimy do katalogu ze świeżo sklonowanym repozytorium
-    dodaj plik/usun plik    # robimy jakąś zmianę na dysku (np. tworzymy plik)
+    dodaj plik/usun plik        # robimy jakąś zmianę na dysku (np. tworzymy plik)
     git add .                   # dodajemy do „poczekalni git-a” („staging area”).
                                 # Kropka oznacza bieżący katalog roboczy - to oznacza,
                                 # że do git'a będą dodane wszystkie zmienione pliki
@@ -163,8 +163,8 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 
 4.2. Dalsza praca z git-em
 
-    git pull				# 
-    dodaj/usun coś			#
-    git add .				# Opis taki jak powyżej.
-    git commit -m "komentarz jakiś"	#
-    git push				#
+    git pull                            # 
+    dodaj/usun coś                      #
+    git add .                           # Opis taki jak powyżej.
+    git commit -m "komentarz jakiś"     #
+    git push                            #
