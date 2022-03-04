@@ -150,7 +150,7 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 4.1. Szybkie rozpoczęcie pracy z git-em:
 
     cd Xxxxxxxxxxxxxxxx         # przechodzimy do katalogu ze świeżo sklonowanym repozytorium
-    _dodaj plik/usun plik_    # robimy jakąś zmianę na dysku (np. tworzymy plik)
+    dodaj plik/usun plik    # robimy jakąś zmianę na dysku (np. tworzymy plik)
     git add .                   # dodajemy do „poczekalni git-a” („staging area”).
                                 # Kropka oznacza bieżący katalog roboczy - to oznacza,
                                 # że do git'a będą dodane wszystkie zmienione pliki
@@ -164,7 +164,7 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 4.2. Dalsza praca z git-em
 
     git pull				# 
-    _dodaj/usun coś_			#
+    dodaj/usun coś			#
     git add .				# Opis taki jak powyżej.
     git commit -m "komentarz jakiś"	#
     git push				#
