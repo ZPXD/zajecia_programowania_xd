@@ -116,13 +116,15 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 
 ----------------------------------------------------------
 
-NOTATKA z zajęć
+## NOTATKA z zajęć
 
-# 07.03.22 - Start II części zajęć
+### 07.03.22 - Start II części zajęć
+
 - każde zajęcia - 1 mała rzecz + PR
 - zadanie domowe - zadanie tygodniowe + PR
 
-# Jak dołączać:
+### Jak dołączać:
+
 1. Szturm
 2. Dla nowych i chętnych: Piaskownica 001-012
 3. Systematyzacja + klocki
@@ -139,21 +141,20 @@ NOTATKA z zajęć
 2. Napiszemy program do sprawdzania zadań domowych
 
 3. Ogólnie - rzucimy okiem na bardziej rozbudowany kod.
+
     git clone Xxxxxxxxxxxxxxxx  # na przykład:
                                 #  git clone git@github.com:ZPXD/cwiczenia-git.git
 
 4. Kod z zajęć:
+
 4.1. Szybkie rozpoczęcie pracy z git-em:
 
     cd Xxxxxxxxxxxxxxxx         # przechodzimy do katalogu ze świeżo sklonowanym repozytorium
-    
-    __dodaj plik/usun plik__    # robimy jakąś zmianę na dysku (np. tworzymy plik)
-
+    _dodaj plik/usun plik_    # robimy jakąś zmianę na dysku (np. tworzymy plik)
     git add .                   # dodajemy do „poczekalni git-a” („staging area”).
                                 # Kropka oznacza bieżący katalog roboczy - to oznacza,
                                 # że do git'a będą dodane wszystkie zmienione pliki
                                 # z bieżącego katalogu roboczego.
-    
     git commit -m "komentarz jakiś" # zatwierdzanie zmian („commit”) -
                                 # wypchnięcie zmienionych plików z „poczekalni” do
                                 # migawki git-a
@@ -163,7 +164,7 @@ NOTATKA z zajęć
 4.2. Dalsza praca z git-em
 
     git pull				# 
-    __dodaj/usun coś__			#
+    _dodaj/usun coś_			#
     git add .				# Opis taki jak powyżej.
     git commit -m "komentarz jakiś"	#
     git push				#
