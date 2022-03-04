@@ -123,8 +123,7 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 
     git push                    
 
-
-	4.2. Dalsza praca z git-em
+4.2. Dalsza praca z git-em
 
     git pull                            
     dodaj/usun coś                      
