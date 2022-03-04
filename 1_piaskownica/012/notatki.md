@@ -122,7 +122,7 @@ YT: https://www.youtube.com/watch?v=P3pi3Co1wDI
 > Wypchnięcie zmian do zdalnego repozytorium, np. na Github, lub na własny zdalny serwer.
    git push                    
 
-4.2. Dalsza praca z git-em
+	4.2. Dalsza praca z git-em
 
     git pull                            
     dodaj/usun coś                      
