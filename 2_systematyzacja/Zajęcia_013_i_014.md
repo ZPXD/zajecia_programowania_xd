@@ -15,7 +15,7 @@ Dodaj na stronę zdjęcie z flagą Ukrainy. Aby to zrobić dodaj do swojej stron
 ```
 Jeżeli chcesz, możesz modyfikować fragment **<img src=** - jak się przyjrzysz, zobaczysz, że każdy zapis ma sens, np. tu definiujesz link "url" strony www z obrazkiem. Ten obrazek będzie wyświetlany na stronie z powyższą linią. Dodaj poniższą linię z flagą Polską:                                            
 ```
-<div style="display: flex; justify-content: center"><img src="https://us.edu.pl/wp-content/uploads/obrazek-wyr%C3%B3%C5%BCniaj%C4%85cy/US_obrazek_pomoc_ukraina.png" alt="flag"></div>
+<div style="display: flex; justify-content: center"><img src="https:// www.wykop.pl/cdn/c3201142/comment_KieFARtNuQivpmwsf27V3vSg6wmzdWBt.jpg" alt="flag"></div>
 ```
 
 
