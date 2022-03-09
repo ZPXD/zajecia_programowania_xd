@@ -71,3 +71,26 @@ Np.
 
 Albo:
 
+
+
+#### Flavicon
+
+Jak mozna zauważyć, na górze każej zakładki w przeglądarce jest mały obrazek - możesz zmienić jego zawartość w 4 krokach:
+
+1. Stwórz ikonkę 16x16 pikseli z rozszerzeniem .ico. Na przykład na stronie https://www.favicon-generator.org/
+
+2. Zapisz jako favicon.ico i skopiuj do katalogu /var/www/flaga/static. Ja ze swojego komputera skopiowałam o tak:
+```
+scp <ścieżka do pliku na komputerze> <skrót do logowania na serwer>:/var/www/flaga/static
+```
+3. Teraz trzeba umieścić link do tej ikonki w plikach html we flaga/templates. I tu mamy dwie opcje, albo tymczasowo wrzucić do każdego pliku html wewnątrz <head></head>, albo jeśli ktoś już umie w extendowanie to w bazowym pliku html. Link wygląda tak:
+```
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+```
+4. Po przeładowaniu serwera powinno działać
+
+
+#### Dodaj kursor z flagą Ukrainy. (Opis autorstwa @Urbid ):
+```
+https://github.com/KubaBaniak/flag_cursor
+```
