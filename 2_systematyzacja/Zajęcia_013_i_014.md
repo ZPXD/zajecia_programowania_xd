@@ -1,6 +1,34 @@
 #### Flaga dla Ukrainy
 
 
+#### Kod w pliku app.py (/var/www/flaga/app.py)
+
+Wklej w pliku app.py:
+```
+@app.route('/flaga-dla-ukrainy')
+def flaga_dla_ukrainy():
+    return render_template("flaga-dla-ukrainy.html")
+```
+
+I dodaj plik flaga-dla-ukrainy.html do folderu z plikami html w  folderze templates )w /var/www/flaga/templates/flaga-dla-ukrainy.html)
+```
+<!DOCTYPE>
+<html>
+<head>
+</head>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center">xDDD Coś od siebie : )</h1>
+</body>
+
+</html>
+```
+
 
 #### Kilka słów od siebie
 ```
@@ -15,7 +43,7 @@ Dodaj na stronę zdjęcie z flagą Ukrainy. Aby to zrobić dodaj do swojej stron
 ```
 Jeżeli chcesz, możesz modyfikować fragment **<img src=** - jak się przyjrzysz, zobaczysz, że każdy zapis ma sens, np. tu definiujesz link "url" strony www z obrazkiem. Ten obrazek będzie wyświetlany na stronie z powyższą linią. Dodaj poniższą linię z flagą Polską:                                            
 ```
-<div style="display: flex; justify-content: center"><img src="https:// www.wykop.pl/cdn/c3201142/comment_KieFARtNuQivpmwsf27V3vSg6wmzdWBt.jpg" alt="flag"></div>
+<div style="display: flex; justify-content: center"><img src="https://www.wykop.pl/cdn/c3201142/comment_KieFARtNuQivpmwsf27V3vSg6wmzdWBt.jpg" alt="flag"></div>
 ```
 
 
