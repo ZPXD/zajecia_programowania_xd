@@ -94,3 +94,69 @@ scp <ścieżka do pliku na komputerze> <skrót do logowania na serwer>:/var/www/
 ```
 https://github.com/KubaBaniak/flag_cursor
 ```
+
+
+5. Wrzuć na stronę informację o postaci z wikipedii:
+
+
+```
+pip3 install wikipedia
+```
+Stwórz we fladze folder `moje_programy` a w nim plik `postac.py` wewnątrz katalogu /var/www/flaga.
+Czyli plik /var/www/flaga/moje_programy/postac.py
+
+A w nim zawrzyj kod:
+```
+import wikipedia as wiki
+wiki.set_lang("pl")
+
+def postac_wiki(postac:str):    
+    
+    strona = wiki.search(postac)
+    postać = wiki.page(strona[0])
+    content = postać.content
+    content = content.split("\n\n\n")
+
+    opis = []
+    opis.append(content[0])
+    
+    for n in content:
+        if "== Życior" in n or "== Twór" in n:
+                opis.append(n)
+    img = wiki.page(strona[0]).images[0]
+    opis = "\n".join(opis)
+    ludz = postac
+    
+    return ludz, opis, img
+```
+
+A wewnątrz `app.py` dodaj:
+
+```
+from moje_programy.postac import postac_wiki
+import random
+
+# ...
+
+@app.route('/flaga-dla-ukrainy')
+def flaga_dla_ukrainy():
+    ludzie = [
+        'Ludz 1',
+        'Ludz 2',
+        'Ludz 3', 
+    ]
+    dane = []
+    for ludz in ludzie:
+        ludz, opis, img = postac_wiki(ludz)
+        dane.append([ludz, opis, img])
+    
+    wylosowany = random.choice(dane)
+    ludz = wylosowany[0]
+    opis = wylosowany[1]
+    img = wylosowany[2]
+    
+    return render_template("flaga-dla-ukrainy.html", ludz=ludz, opis=opis, img=img)
+```
+
+
+
