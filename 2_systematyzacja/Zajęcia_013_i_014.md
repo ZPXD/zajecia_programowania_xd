@@ -110,24 +110,36 @@ A w nim zawrzyj kod:
 import wikipedia as wiki
 wiki.set_lang("pl")
 
-def postac_wiki(postac:str):    
+import random 
+import wikipedia as wiki
+wiki.set_lang("pl")
+
+
+def postac_wiki(postac):
     
     strona = wiki.search(postac)
     postać = wiki.page(strona[0])
     content = postać.content
     content = content.split("\n\n\n")
-
     opis = []
     opis.append(content[0])
-    
+
     for n in content:
-        if "== Życior" in n or "== Twór" in n:
+        if "== Życ" in n or "== Twór" in n:
                 opis.append(n)
-    img = wiki.page(strona[0]).images[0]
+                
+    imgs = wiki.page(strona[0]).images
+
+    for img in imgs:
+        if img and img.endswith("svg"):
+            imgs.remove(img)
+    if len(imgs) > 0:
+        img  = imgs[0]
     opis = "\n".join(opis)
     ludz = postac
+
+    return [ludz, opis ,img]
     
-    return ludz, opis, img
 ```
 
 A wewnątrz `app.py` dodaj:
@@ -146,15 +158,8 @@ def flaga_dla_ukrainy():
         'Ludz 3', 
     ]
     dane = []
-    for ludz in ludzie:
-        ludz, opis, img = postac_wiki(ludz)
-        dane.append([ludz, opis, img])
-    
-    wylosowany = random.choice(dane)
-    ludz = wylosowany[0]
-    opis = wylosowany[1]
-    img = wylosowany[2]
-    
+    ludz = random.choice(ludzie)
+    ludz, opis, img = postac_wiki(ludz)
     return render_template("flaga-dla-ukrainy.html", ludz=ludz, opis=opis, img=img)
 ```
 
