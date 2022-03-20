@@ -3,7 +3,7 @@
 1. Czym są klocki?
 2. Lista klocków
 3. Jak korzystać z klocków (!!!)
-#### 4. ABY ZACZĄĆ POTRZEBUJESZ TYCH PROGRAMÓW :) 
+4. **ABY ZACZĄĆ POTRZEBUJESZ TYCH PROGRAMÓW :) **
 
 ## 1. Czym są klocki?
 
