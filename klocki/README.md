@@ -1,12 +1,17 @@
-# Czesć
+# Cześć
 
+1. Czym są klocki?
+2. Lista klocków
+3. Jak korzystać z klocków (!!!)
+**4. Jak zacząć? Czego potrzebujesz aby zacząć naukę? (!!!) <----**
 
-### To są klocki. 
+## 1. Czym są klocki?
 
 Gotowe, kompletne, skondensowane opracowania z których każde docelowo ogarnia od A do Z jedno istotne zagadnienie w pythonie. Klocki to takie zagadnienia jak zmienna, warunek, funkcja czy lista. Mając kilka-kilkanaście w miarę opanowanych klocków można już z powodzeniem budować z nich sensowne programy.
 
 
-#### Spis treści:
+## 2. Lista klocków
+
 - 000 - [Brudnopis](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/klocki/000_brudnopis.ipynb)
 - 001 - [Program](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/klocki/001_program.ipynb)
 - 002 - [Komentarze](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/klocki/002_komentarz.ipynb)
@@ -27,15 +32,19 @@ Gotowe, kompletne, skondensowane opracowania z których każde docelowo ogarnia 
 - 999 - [Ćwiczenia](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/klocki/999_cwiczenia.ipynb)
 
 
-## Jak korzystać z klocków? 
+Jeżeli umiesz pobrać te zeszyty i je uruchomić w Jupyterze, to możesz kliknąć w 1 klocek i odrazu zacząć naukę. Na pewno masz wszystko gotowe? Ruszajmy.
 
-#### Praktyka i nauka.
+
+
+## 3. Jak korzystać z klocków? 
+
+#### Szybkie ćwiczenia i nauka
 
 Otwórz drugie okno z notatnikiem obok i wklejaj do niego bloki kodu.
 Modyfikuj, sprawdzaj jak działa, eksperymentuj.
 Gdy dojdziesz do końca, najważniejsze są powtórki.
 
-#### Powtórki.
+#### Powtórki
 
 Przez jakiś czas wracaj tutaj, np. co dzień albo co tydzień aby rzucić okiem, 
 tak najpewniej utrwalisz wiedzę.
@@ -44,21 +53,22 @@ Kiedy sam się uczyłem, starałem się zawsze mieć przy sobie kartkę
 z notatkami, taką jak ta, aby móc w wolnej chwili rzucić okiem i
 sobie powtórzyć takie rzeczy. Polecam.
 
-#### Poziomy.
+#### Poziomy
 
-Ten plik jest podzielony na kilka poziomów. 
+Te pliki są podzielone na kilka poziomów. 
 Możesz przeczytać cały opis danego tematu za 1 razem albo
 nauczyć sie tego co najbardziej istotnie i po zaawansowany materiał
 wrócić tu później.
 
 
-# Zanim zaczniesz naukę - czego potrzebujesz aby zacząć?
+
+## 4. Czego potrzebujesz aby zacząć?
 
 
 ### 1. Zdobądź Jupytera, git'a i VSCode do pracy z kodem.
 
 Aby przygotować wszystko co jest potrzebne do rozpoczęcia nauki programowania w **Python 3** (i to w prawdziwym internetowym środowisku) powstał **[Szturm na AWS - serwer ze wsparciem](https://discord.gg/zyY3mpW4)** wraz z opisem **[jak przejść 10 etapów szturmu](https://github.com/ZPXD/flaga)**. Zdobędziesz tam to co potrzebne do korzystania z klocków do nauki Pythona 3 w praktyce:
-1.  Edytor kodu **VSCode** wraz z łączeniem przez **SSH**
+1. Edytor kodu **VSCode** wraz z łączeniem przez **SSH**
 2. Interaktywne zeszyty **Jupyter** i **git** (u siebie na komputerze lub na Twoim serwerze)
 
 
@@ -112,18 +122,4 @@ Uczyć można się szybko albo wolno. Skutecznie albo nie. Zrób to z głową, z
 8. Dobra kompania
 
 
-
 # Masz wszystko i wiesz jak się uczyć? Na pewno? Zaczynajmy.
-
-
-# Jupyter
-
-### Przyda się do:
-
-- Nauki - w tym formacie będą materiały.
-- Szybkiego testowania efektów małych kawałków kodu
-- Przejrzystego eksplorowania danych tekstowych, tabel, wykresów, grafów.
-- Łatwego ogarniania kodu mając do dyspozycji kilka komórek jednocześnie 
-- Szkicowania programów (jest świetny)
-- Pozwala poruszać się po komputerze używając normalnych terminalowych komend.
-- Robienia materiałów gdzie wykorzystamy łączenie działających programów, ich kodu z tekstem i grafiką.
