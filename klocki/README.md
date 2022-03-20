@@ -1,9 +1,10 @@
-# Cześć
+# Klocki do nauki Python 3
 
 1. Czym są klocki?
 2. Lista klocków
 3. Jak korzystać z klocków (!!!)
-**4. Jak zacząć? Czego potrzebujesz aby zacząć naukę? (!!!) <----**
+
+**4. ABY ZACZĄĆ POTRZEBUJESZ TYCH PROGRAMÓW :) **
 
 ## 1. Czym są klocki?
 
