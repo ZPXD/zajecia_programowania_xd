@@ -2,12 +2,12 @@
 
 1. Czym są klocki?
 2. Lista klocków
-3. ABY ZACZĄĆ POTRZEBUJESZ TYCH PROGRAMÓW :)
+3. Czego potrzebujesz aby zacząć? ZAINSTALUJ TE PROGRAMY :)
 4. Jak korzystać z klocków (!!!)
 
 ## 1. Czym są klocki?
 
-Gotowe, kompletne, skondensowane opracowania z których każde docelowo ogarnia od A do Z jedno istotne zagadnienie w pythonie. Klocki to takie zagadnienia jak zmienna, warunek, funkcja czy lista. Mając kilka-kilkanaście w miarę opanowanych klocków można już z powodzeniem budować z nich sensowne programy.
+Gotowe, kompletne, skondensowane opracowania z których każde docelowo ogarnia od A do Z jedno istotne zagadnienie w Pythonie. Klocki to takie zagadnienia jak zmienna, warunek, funkcja czy lista. Mając kilka-kilkanaście w miarę opanowanych klocków można już z powodzeniem budować z nich sensowne programy.
 
 
 ## 2. Lista klocków
@@ -93,7 +93,6 @@ Uczyć można się szybko albo wolno. Skutecznie albo nie. Zrób to z głową, z
 7. Praktyka
 
 8. Dobra kompania
-
 
 
 ## 4. Jak korzystać z klocków? 
