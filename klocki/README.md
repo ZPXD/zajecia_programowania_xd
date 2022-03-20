@@ -1,8 +1,8 @@
-# Klocki do nauki Python 3
+# Klocki do nauki programwania w Pythonie
 
 1. Czym są klocki?
 2. Lista klocków
-3. Czego potrzebujesz aby zacząć? ZAINSTALUJ TE PROGRAMY :)
+3. ZACZNIJ OD INSTALACJI TYCH PROGRAMÓW :)
 4. Jak korzystać z klocków (!!!)
 
 ## 1. Czym są klocki?
