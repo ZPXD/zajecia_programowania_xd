@@ -2,8 +2,8 @@
 
 1. Czym są klocki?
 2. Lista klocków
-3. Jak korzystać z klocków (!!!)
-4. **ABY ZACZĄĆ POTRZEBUJESZ TYCH PROGRAMÓW :) **
+3. ABY ZACZĄĆ POTRZEBUJESZ TYCH PROGRAMÓW :)
+4. Jak korzystać z klocków (!!!)
 
 ## 1. Czym są klocki?
 
@@ -35,34 +35,7 @@ Gotowe, kompletne, skondensowane opracowania z których każde docelowo ogarnia 
 Jeżeli umiesz pobrać te zeszyty i je uruchomić w Jupyterze, to możesz kliknąć w 1 klocek i odrazu zacząć naukę. Na pewno masz wszystko gotowe? Ruszajmy.
 
 
-
-## 3. Jak korzystać z klocków? 
-
-#### Szybkie ćwiczenia i nauka
-
-Otwórz drugie okno z notatnikiem obok i wklejaj do niego bloki kodu.
-Modyfikuj, sprawdzaj jak działa, eksperymentuj.
-Gdy dojdziesz do końca, najważniejsze są powtórki.
-
-#### Powtórki
-
-Przez jakiś czas wracaj tutaj, np. co dzień albo co tydzień aby rzucić okiem, 
-tak najpewniej utrwalisz wiedzę.
-
-Kiedy sam się uczyłem, starałem się zawsze mieć przy sobie kartkę
-z notatkami, taką jak ta, aby móc w wolnej chwili rzucić okiem i
-sobie powtórzyć takie rzeczy. Polecam.
-
-#### Poziomy
-
-Te pliki są podzielone na kilka poziomów. 
-Możesz przeczytać cały opis danego tematu za 1 razem albo
-nauczyć sie tego co najbardziej istotnie i po zaawansowany materiał
-wrócić tu później.
-
-
-
-## 4. Czego potrzebujesz aby zacząć?
+## 3. Czego potrzebujesz aby zacząć?
 
 
 ### 1. Zdobądź Jupytera, git'a i VSCode do pracy z kodem.
@@ -120,6 +93,32 @@ Uczyć można się szybko albo wolno. Skutecznie albo nie. Zrób to z głową, z
 7. Praktyka
 
 8. Dobra kompania
+
+
+
+## 4. Jak korzystać z klocków? 
+
+#### Szybkie ćwiczenia i nauka
+
+Otwórz drugie okno z notatnikiem obok i wklejaj do niego bloki kodu.
+Modyfikuj, sprawdzaj jak działa, eksperymentuj.
+Gdy dojdziesz do końca, najważniejsze są powtórki.
+
+#### Powtórki
+
+Przez jakiś czas wracaj tutaj, np. co dzień albo co tydzień aby rzucić okiem, 
+tak najpewniej utrwalisz wiedzę.
+
+Kiedy sam się uczyłem, starałem się zawsze mieć przy sobie kartkę
+z notatkami, taką jak ta, aby móc w wolnej chwili rzucić okiem i
+sobie powtórzyć takie rzeczy. Polecam.
+
+#### Poziomy
+
+Te pliki są podzielone na kilka poziomów. 
+Możesz przeczytać cały opis danego tematu za 1 razem albo
+nauczyć sie tego co najbardziej istotnie i po zaawansowany materiał
+wrócić tu później.
 
 
 # Masz wszystko i wiesz jak się uczyć? Na pewno? Zaczynajmy.
