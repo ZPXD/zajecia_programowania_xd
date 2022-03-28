@@ -1,0 +1,22 @@
+O własnych stój siłach – nie zaś podtrzymywany.
+Najważniejsza jest prostota.
+Nie chlubą jest uciec przed śmiercią, lecz uśmiechnąć się gdy i ona się do ciebie uśmiecha.
+Nie czyń nic bez rozwagi, lecz tylko według zasady dobrze obmyślanej.
+Nie godzi się, aby twoja dusza czuła się zmęczona tym życiem, zanim nie zmęczy się nim ciało.
+Nie należy gniewać się na bieg wypadków, bo to ich nic nie obchodzi.
+Niezdobytą warownię przedstawia dusza wolna od namiętności.
+Nigdzie bowiem nie schroni się człowiek spokojniej i łatwiej jak do duszy własnej.
+Życie jest krótkie. Korzystaj z teraźniejszości w sposób rozumny i słuszny. Bądź rozsądny w odpoczynku.
+Życie mężczyzny jest ufarbowane na kolor jego wyobraźni.
+Jak wielki spokój zyskuje ten, kto nie baczy na to, co bliźni mówi, czyni lub myśli, ale na to tylko, co sam robi, by było sprawiedliwie i zbożnie.
+
+
+--------------------
+
+
+Darek - serwery.
+
+1. Jak wydzielić na serwerze bezpieczne miejsce dla obu graczy.
+-> Folder - player1 / Folder - player2
+
+2. 
