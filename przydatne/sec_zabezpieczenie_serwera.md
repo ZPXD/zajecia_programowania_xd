@@ -12,7 +12,6 @@ Plik zalążkowy.
 - set_sshd_config.py
 
 3. Whitelista:
-- 
 - make_whitelist.py
 
 4. VPN:
