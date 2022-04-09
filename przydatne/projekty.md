@@ -8,7 +8,6 @@ Jeżeli w pliku README.md projektu nie jest opisane inaczej, wykonaj następują
 2. Środowisko
 3. Biblioteki
 4. Uruchomienie
-5. Praca na serwerze przez tunel
  
 ## Jak uruchomić:
 
@@ -64,12 +63,17 @@ I wejdź na http://127.0.0.1:5000/
 #### A. Nauka
 
 
-
 #### B. Kontrybucja i rozwój
 
+Aby dołączyć do rozwoju, przeczytaj o pracy z branchami.
+
+```
+link_repo=None
+nazwa_branchu=main
+git -b $nazwa_branchu $link_repo
+```
 
 
-#### C. 
 
 #### Wyjdź ze środowiska
 ```
