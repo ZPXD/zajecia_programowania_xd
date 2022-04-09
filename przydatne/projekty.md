@@ -1,5 +1,15 @@
 
 
+# Projekty
+
+Jeżeli w pliku README.md projektu nie jest opisane inaczej, wykonaj następujące kroki aby uczyć się lub dołączyć do kontrybucji.
+
+1. Pobieranie
+2. Środowisko
+3. Biblioteki
+4. Uruchomienie
+5. Praca na serwerze przez tunel
+ 
 ## Jak uruchomić:
 
 Będąc na przygotowanym serwerze albo u siebie na przygotowanym komputerze (przygotowanym czyli masz git, python3, pip3, venv, ssh).
