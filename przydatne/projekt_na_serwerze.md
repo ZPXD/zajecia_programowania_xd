@@ -1,42 +1,36 @@
-## Uruchom projekt na serwerze zajęciowym z systemem Linux Ubuntu 18/20
+## Uruchom projekt u siebie na komputerze z systemem Linux Ubuntu 18/20
 
-## Jak uruchomić:
+Kroki:
 
-Będąc na przygotowanym serwerze albo u siebie na przygotowanym komputerze (przygotowanym czyli masz git, python3, pip3, venv, ssh).
+### I. Przygotowanie po Twojej stronie:
+#### (Komputer, użytkownik, zainstalowane: python3, pip3, venv, git i otwórz terminal, wejdź w miejsce na projekt).
 
-Upewnij się, że jesteś zalogowany jako użytkownik w folderze w którym chcesz zapisać projekt. 
+TL;DR: jak masz poinstalowane python3, pip3, venv i git to będąc zalogowany na swojego użytkownika wejdź do folderu przeznaczonego na projekty i ruszaj dalej. Jak coś nie działa to tu jest dokładniejszy opis każdej z kwestii: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md).
 
-#### 1. Użytkownik
+### II. Pobierz i uruchom projekt:
+#### (git clone, środowisko, biblioteki i uruchomienie projektu)
 
-Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Wstaw pod `nazwa_uzytkownika` nazwę jaką masz na serwerze lub na swoim komputerze.
+TL;DR: jak powyższe gra, to poznaj [url_repozytorium](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/url_repozytorium.md), skopiuj je i uruchom korzystając z poniższego kodu (jeżeli była by potrzeba, tu jest [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/pobierz_i_uruchom_projekt_linux.md)):
 ```
-su nazwa_uzytkownika
+repo_url=tu_wklej_url
 ```
-
-#### 2. Miejsce
-
-Na serwerze zajęciowym dobry folder na projekty które są uruchamiane także w formie www to `/var/www`. Wejdziesz tam wpisując w terminalu:
+I wklej wszystkie poniższe linie:
 ```
-cd /var/www
-``` 
-lub jeżeli nie będą uruchamiane jako serwisy www, możesz założyć nowy folder w tym celu:
-```
-cd /home/$USER
-mkdir projekty_zpxd
-cd projekty_zpxd
+git clone $repo_url
+srodowisko="${PWD##*/}env"
+srodowisko=${srodowisko%.*}_${srodowisko##*.}
+python3 -m venv $srodowisko
+source $srodowisko/bin/activate
+pip3 install -r requirements.txt
 ```
 
-Na własnym komputerze projekty proponuje także trzymać w 1 miejscu:
+#### A. na serwerze jeżeli projekt ma formę strony www:
 ```
-cd
-mkdir projekty_zpxd
-cd projekty_zpxd
-``
-#### Oglądaj rezultaty w przeglądarce
+export FLASK_APP=app.py
+flask run
+```
 
-#### B: na serwerze:
-
-Otwórz nowy terminal lub powershell będąc na swoim komputerze i wpisz:
+Normalnie rezultat był by widziany w przeglądarce. Jednak jako, że pracuejsz na serwerze, to: otwórz jeszcze jeden nowy terminal lub powershell będąc na swoim komputerze i wpisz:
 
 za username -  wstaw nazwę użytkownika
 za klucz - nazwę pliku klucza lub ścieżkę do klucza
@@ -45,4 +39,26 @@ za 1.1.1.1 – ip serwera
 ssh -L 5000:localhost:80 -i kluc username@1.1.1.1
 ```
 
-I wejdź na http://127.0.0.1:5000/
+Po odpaleniu aplikacji wejdź na http://127.0.0.1:5000/ u siebie na komputerze: teraz zadziała.
+
+
+#### B. Na serwerze jeżeli projekt ma formę skryptu (sprawdzisz skrypty w folderze wpisując `ls`):
+```
+python3 nazwa_skryptu.py
+```
+
+### III. Nauka
+
+Odpal projekt, poczytaj kod, poucz się na nim i poznaj jak działa. Dodaj element lub dwa, odejmij, modyfikuj. 
+
+### IV. Kontrybucja i rozwój
+
+
+Aby dołączyć do rozwoju, przeczytaj pracy z git, o pracy z branchami i PR.
+
+```
+link_repo=None
+nazwa_branchu=main
+git -b $nazwa_branchu $link_repo
+```
+
