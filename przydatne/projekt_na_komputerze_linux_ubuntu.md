@@ -34,6 +34,7 @@ a jeżeli projekt ma formę skryptu (sprawdzisz skrypty w folderze wpisując `ls
 python3 nazwa_skryptu.py
 ```
 
+## Dokładny opis: 
 
 #### 1. Pobierz repozytorium:
 
