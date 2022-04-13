@@ -1,5 +1,3 @@
-
-
 # Projekty
 
 Jeżeli w pliku README.md projektu nie jest opisane inaczej, wykonaj następujące kroki aby uczyć się lub dołączyć do kontrybucji.
@@ -24,19 +22,22 @@ su nazwa_uzytkownika
 
 #### 2. Miejsce
 
-Jeżeli jesteś u siebie na komputerze, to może być:
+Na serwerze zajęciowym dobry folder na projekty które są uruchamiane także w formie www to `/var/www`. Wejdziesz tam wpisując w terminalu:
+```
+cd /var/www
+``` 
+lub jeżeli nie będą uruchamiane jako serwisy www, możesz założyć nowy folder w tym celu:
+```
+cd /home/$USER
+mkdir projekty_zpxd
+cd projekty_zpxd
+```
+
+Na własnym komputerze projekty proponuje także trzymać w 1 miejscu:
 ```
 cd
 mkdir projekty_zpxd
 cd projekty_zpxd
-```
-Jeżeli jesteś na serwerze zajęciowym, spróbuj:
-```
-cd /var/www
-``` 
-lub
-```
-cd /home/$USER
 ```
 
 #### 3 Pobierz:
@@ -72,9 +73,18 @@ pip3 install -r requirements.txt
 
 #### 6. Uruchom program:
 
+Jeżeli to aplikacja www:
 ```
 export FLASK_APP=app.py
 flask run
+```
+Jeżeli to skrypt, to zamień w poniższym poleceniu `nazwa_skryptu.py` na nazwę programu i go uruchomisz:
+```
+python3 nazwa_skryptu.py
+```
+Aby sprawdzić zawartość plików w folderze, wpisz:
+```
+ls -la
 ```
 
 #### Oglądaj rezultaty w przeglądarce
