@@ -2,11 +2,9 @@
 
 Kroki:
 
-### I. Przygotowanie po Twojej stronie i serwera:
-1. **Przygotowany serwer** - Jeżeli nie masz serwera, zdobądź go i przygotuj. O tym jest przygoda: [Szturm na AWS](https://github.com/ZPXD/flaga)
-2. **Programy wymagane wstępnie** - Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
-3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik (opis niżej)
-4. **Miejsce** - Wejdź na serwerze do miejsca na projekt (opis niżej)
+### I. Przygotowanie po Twojej stronie - komputer, użytkownik, programy wstępnie wymagane i miejsce na projekt.
+
+TL;DR: jak masz serwer zajęciowy to wejdź na niego i będąc zalogowany na swojego użytkownika wejdź do folderu na projekty. Jak byś miał wątpliwości to tu opis w krokach i dokładniejsze opisy: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md)
 
 ### II. Pobierz i uruchom projekt:
 1. **Pobierz** - git clone
@@ -37,38 +35,6 @@ python3 nazwa_skryptu.py
 ```
 
 
-## I. Przygotowanie po Twojej stronie i serwera:
-
-#### 1. Jeżeli nie masz serwera, zdobądź go i przygotuj.
-Temu dedykowana jest przygoda [Szturm na AWS](https://github.com/ZPXD/flaga).
-
-#### 2. Zainstaluj wymagane oprogramowanie
-Potrzebujesz: **git, python3, pip3 i venv**. Jeżeli Szturm na AWS masz za sobą, to masz je zainstalowane. Jeżeli nie, przeczytaj: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.md). lub zainstaluj odpalając poniższy skrypt:
-```
-wget -q 'https://raw.githubusercontent.com/ZPXD/zajecia_programowania_xd/main/przydatne/server_preparation_for_project.sh' && chmod +x server_preparation_for_project.sh && ./server_preparation_for_project.sh;
-```
-
-#### 3. Użytkownik
-Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżeli jeszcze nie masz użytkownika na serwerze, stwórz go: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/linux_uzytkownik.md).
-```
-su nazwa_uzytkownika
-```
-
-#### 4. Miejsce
-Jeżeli wiesz gdzie chcesz uruchomić projekt aby działał, przejdź tam. Jeżeli nie:
-
-A. Projekty ze stroną www zakładaj w `/var/www`:
-```
-cd /var/www
-``` 
-B. Na projekt w formie skryptów stwórz folder jak nie masz i wejdź do niego:
-```
-mkdir /home/$USER/projekty_zpxd
-cd /home/$USER/projekty_zpxd
-```
-
-## II. Pobierz i uruchom projekt:
-
 #### 1. Pobierz repozytorium:
 
 1. Wejdź na stornę główną repozytorium projektu - np. `https://github.com/ZPXD/arena.xd`.
@@ -79,7 +45,7 @@ cd /home/$USER/projekty_zpxd
 git clone repo_url
 ```
 
-#### 2. Uruchom środowisko:
+#### 2. Uruchom środowisko i zainstaluj biblioteki:
 
 Pierwsze dwie linie przypisują do zmiennej nazwę środowiska a ostatnie dwie je tworzą i aktywują.
 
@@ -121,27 +87,15 @@ ls -la
 
 ### Oglądaj rezultaty w przeglądarce
 
-#### A: na własnym kompie:
-
 Po odpaleniu aplikacji wejdź na http://127.0.0.1:5000/
 
-#### B: na serwerze:
 
-Otwórz nowy terminal lub powershell będąc na swoim komputerze i wpisz:
-
-za username -  wstaw nazwę użytkownika
-za klucz - nazwę pliku klucza lub ścieżkę do klucza
-za 1.1.1.1 – ip serwera
-```
-ssh -L 5000:localhost:80 -i klucz username@1.1.1.1
-```
-
-I wejdź na http://127.0.0.1:5000/
 
 ### Co dalej?
 
 #### A. Nauka
 
+J/W.
 
 #### B. Kontrybucja i rozwój
 
@@ -151,11 +105,4 @@ Aby dołączyć do rozwoju, przeczytaj o pracy z branchami.
 link_repo=None
 nazwa_branchu=main
 git -b $nazwa_branchu $link_repo
-```
-
-
-
-#### Wyjdź ze środowiska
-```
-deactivate
 ```
