@@ -13,36 +13,27 @@ Projekt:
 6. Przygotuj środowisko projektu i biblioteki
 7. Uruchom
 
-#### 1. Jeżeli nie masz serwera, zdobądź go i przygotuj
+#### 1. Jeżeli nie masz serwera, zdobądź go i przygotuj.
+Temu dedykowana jest przygoda [Szturm na AWS](https://github.com/ZPXD/flaga).
 
-
-#### 2. Przygotowanie wymaganego oprogramowania
-
+#### 2. Zainstaluj wymagane oprogramowanie
 ```
 wget -q 'https://raw.githubusercontent.com/ZPXD/zajecia_programowania_xd/main/przydatne/server_preparation_for_project.sh' && chmod +x server_preparation_for_project.sh && ./server_preparation_for_project.sh;
 ```
-
 #### 3. Użytkownik
-
 Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżeli jeszcze nie masz użytkownika na serwerze, stwórz go [Instrukcja]().
-
 ```
 su nazwa_uzytkownika
 ```
 
 #### 3. Miejsce
+Jeżeli wiesz gdzie chcesz uruchomić projekt aby działał, przejdź tam. Jeżeli nie:
 
-Jeżeli wiesz gdzie chcesz uruchomić projekt i działa, przejdź tam zanim pobierzesz repozytorium. Jeżeli nie wiesz:
-
-#### A. Projekt ze stroną www
-Na serwerze zajęciowym dobry folder na projekty które są uruchamiane także w formie www to `/var/www`. Wejdziesz tam wpisując w terminalu:
+A. Projekty ze stroną www zakładaj w `/var/www`:
 ```
 cd /var/www
 ``` 
-
-#### B. Projekt w formie skryptu
-
-Stwórz folder na projekty, jeżeli jeszcze nie masz i wejdź do niego:
+B. Na projekt w formie skryptów stwórz folder jak nie masz i wejdź do niego:
 ```
 mkdir /home/$USER/projekty_zpxd
 cd /home/$USER/projekty_zpxd
@@ -50,10 +41,12 @@ cd /home/$USER/projekty_zpxd
 
 #### 4. Pobierz repozytorium:
 
-W poniższy kod zamiast repo_url wstaw link który znajdziesz klikając w zielony przycisk "code" na głównej stronie repozytorium projektu.
+1. Wejdź na stornę główną repozytorium projektu - np. `https://github.com/ZPXD/arena.xd`.
+2. Znajdź zielony przycisk `code`
+3. Skopiuj url `https://github.com/ZPXD/arena.xd.git`
+4. Uruchom poniższą komendę zamieniając `repo_url` na skopiowany w poprzednim kroku url projektu
 ```
-repo_url=None
-git clone $repo_url
+git clone repo_url
 ```
 
 #### 5. Uruchom środowisko:
