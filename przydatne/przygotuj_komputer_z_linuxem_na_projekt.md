@@ -21,7 +21,10 @@ Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżel
 su nazwa_uzytkownika
 ```
 
-#### 4. Miejsce
+#### 4. Miejsce 
+
+#### A. Na serwerze:
+
 Jeżeli wiesz gdzie chcesz uruchomić projekt aby działał, przejdź tam. Jeżeli nie:
 
 A. Projekty ze stroną www zakładaj w `/var/www`:
