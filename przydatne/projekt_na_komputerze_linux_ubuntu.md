@@ -112,7 +112,7 @@ za username -  wstaw nazwę użytkownika
 za klucz - nazwę pliku klucza lub ścieżkę do klucza
 za 1.1.1.1 – ip serwera
 ```
-ssh -L 5000:localhost:80 -i kluc username@1.1.1.1
+ssh -L 5000:localhost:80 -i klucz username@1.1.1.1
 ```
 
 I wejdź na http://127.0.0.1:5000/
