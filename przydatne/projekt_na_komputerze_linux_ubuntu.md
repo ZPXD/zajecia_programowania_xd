@@ -2,7 +2,8 @@
 
 Kroki:
 
-### I. Przygotowanie po Twojej stronie - komputer, użytkownik, programy wstępnie wymagane i miejsce na projekt.
+### I. Przygotowanie po Twojej stronie:
+#### (Komputer, użytkownik, programy wstępnie wymagane i miejsce na projekt).
 
 TL;DR: jak masz serwer zajęciowy to wejdź na niego i będąc zalogowany na swojego użytkownika wejdź do folderu na projekty. Jak byś miał wątpliwości to tu opis w krokach i dokładniejsze opisy: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md)
 
