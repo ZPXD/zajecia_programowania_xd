@@ -1,7 +1,7 @@
 ## Użytkownik na Linux Ubuntu 18/20
 
 
-### 3. Root.
+### Root.
 
 Powinieneś być już root. Robiliśmy to w [Etap 4 w kroku 6](https://github.com/ZPXD/flaga/blob/main/instrukcje/etap_4_3_zdobadz_serwer_polaczenie.md). Sprawdź to:
 ```
@@ -18,7 +18,7 @@ Jeżeli wszystko zrobiłeś prawidłowo, pojawi Ci się: **root**. Chyba, że je
 
 Jednak najpierw, minuta dla AWS'owców.
 
-### 4. Użytkownik
+### Użytkownik
 
 Użytkownik to to jako kto jesteś na serwerze. Zwykli użytkownicy mają inne uprawnienia niż root. Nie mogą robić pewnych rzeczy i wchodzić w pewne miejsca.
 
