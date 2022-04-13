@@ -26,6 +26,7 @@ a jeżeli projekt ma formę skryptu (sprawdzisz skrypty w folderze wpisując `ls
 python3 nazwa_skryptu.py
 ```
 
+## Dokładniejszy opis:
 
 #### 1. Pobierz repozytorium:
 
@@ -68,15 +69,10 @@ export FLASK_APP=app.py
 flask run
 ```
 
-B. Projekt **w formie skryptu** - zamień w poniższym poleceniu `nazwa_skryptu.py` na nazwę programu i go uruchomisz:
+Po odpaleniu aplikacji wejdź na http://127.0.0.1:5000/
+
+
+B. Projekt **w formie skryptu** - (sprawdzisz skrypty w folderze wpisując `ls`):
 ```
 python3 nazwa_skryptu.py
 ```
-Aby sprawdzić pliki w repozytorium (w folderze projektu), wpisz:
-```
-ls -la
-```
-
-### Oglądaj rezultaty w przeglądarce
-
-Po odpaleniu aplikacji wejdź na http://127.0.0.1:5000/
