@@ -1,13 +1,36 @@
 ## Uruchom projekt u siebie na komputerze z systemem Linux Ubuntu 18/20
 
 #### Kroki
+
+### I. Przygotowanie po Twojej stronie i serwera:
 1. **Przygotowany serwer** - Jeżeli nie masz serwera, zdobądź go i przygotuj [Szturm na AWS](https://github.com/ZPXD/flaga)
 2. **Programy wymagane wstępnie** - Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
 3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik
-4. **Folder** - Miejsce na projekt
-5. **Pobierz** - git clone
-6. **Przygotuj** - środowisko i biblioteki
-7. **Uruchom** - stronę lub skrypt
+4. **Miejsce** - Wejdź na serwerze do miejsca na projekt
+
+### II. Pobierz i uruchom projekt:
+1. **Pobierz** - git clone
+2. **Przygotuj** - środowisko i biblioteki
+3. **Uruchom** - stronę lub skrypt
+
+W skrócie:
+```
+git clone repo_url
+srodowisko="${PWD##*/}env"
+srodowisko=${srodowisko%.*}_${srodowisko##*.}
+python3 -m venv $srodowisko
+source $srodowisko/bin/activate
+pip3 install -r requirements.txt
+```
+i jeżeli projekt ma formę strony www:
+```
+export FLASK_APP=app.py
+flask run
+```
+a jeżeli projekt ma formę skryptu:
+```
+python3 nazwa_skryptu.py
+```
 
 #### 1. Jeżeli nie masz serwera, zdobądź go i przygotuj.
 Temu dedykowana jest przygoda [Szturm na AWS](https://github.com/ZPXD/flaga).
