@@ -21,7 +21,7 @@ Temu dedykowana jest przygoda [Szturm na AWS](https://github.com/ZPXD/flaga).
 wget -q 'https://raw.githubusercontent.com/ZPXD/zajecia_programowania_xd/main/przydatne/server_preparation_for_project.sh' && chmod +x server_preparation_for_project.sh && ./server_preparation_for_project.sh;
 ```
 #### 3. Użytkownik
-Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżeli jeszcze nie masz użytkownika na serwerze, stwórz go [Instrukcja]().
+Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżeli jeszcze nie masz użytkownika na serwerze, stwórz go: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/linux_uzytkownik.md).
 ```
 su nazwa_uzytkownika
 ```
