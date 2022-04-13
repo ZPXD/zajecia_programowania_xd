@@ -3,67 +3,54 @@
 #### Kroki:
 
 Przygotowanie:
-1. Jeżeli nie masz serwera, zdobądź go i przygotuj.
-2. Zainstaluj wymagane oprogramowanie
-3. Miejsce na projekt
-4. Użytkownik
+1. Jeżeli nie masz serwera, zdobądź go i przygotuj [Szturm na AWS](https://github.com/ZPXD/flaga)
+2. Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
+3. Użytkownik []()
+4. Miejsce na projekt []()
 
 Projekt:
 5. Pobierz
 6. Przygotuj środowisko projektu i biblioteki
 7. Uruchom
 
-#### 1. Przygotowanie wymaganego oprogramowania:
+#### 1. Jeżeli nie masz serwera, zdobądź go i przygotuj
 
-Potrzebujesz na serwerze Linuxie Ubuntu co następuje: 
-1. python3
-2. pip3 
-3. venv
 
-Jeżeli czegoś Ci brakuje, uruchom skrypt `server_preparation_for_project.sh` wpisując:
+#### 2. Przygotowanie wymaganego oprogramowania
+
 ```
 wget -q 'https://raw.githubusercontent.com/ZPXD/zajecia_programowania_xd/main/przydatne/server_preparation_for_project.sh' && chmod +x server_preparation_for_project.sh && ./server_preparation_for_project.sh;
 ```
-Lub uruchom poniższe polecenia:
-```
-apt update
-apt install python3-pip python3-dev python3-venv build-essential libssl-dev libffi-dev python3-setuptools --yes
-apt install python3-pip
-pip3 install virtualenv
-```
 
-Upewnij się, że jesteś zalogowany jako użytkownik w folderze w którym chcesz zapisać projekt. 
+#### 3. Użytkownik
 
-#### 2. Użytkownik
+Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżeli jeszcze nie masz użytkownika na serwerze, stwórz go [Instrukcja]().
 
-Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Wstaw pod `nazwa_uzytkownika` nazwę jaką masz na serwerze lub na swoim komputerze.
 ```
 su nazwa_uzytkownika
 ```
 
 #### 3. Miejsce
 
+Jeżeli wiesz gdzie chcesz uruchomić projekt i działa, przejdź tam zanim pobierzesz repozytorium. Jeżeli nie wiesz:
+
+#### A. Projekt ze stroną www
 Na serwerze zajęciowym dobry folder na projekty które są uruchamiane także w formie www to `/var/www`. Wejdziesz tam wpisując w terminalu:
 ```
 cd /var/www
 ``` 
-lub jeżeli nie będą uruchamiane jako serwisy www, możesz założyć nowy folder w tym celu:
+
+#### B. Projekt w formie skryptu
+
+Stwórz folder na projekty, jeżeli jeszcze nie masz i wejdź do niego:
 ```
-cd /home/$USER
-mkdir projekty_zpxd
-cd projekty_zpxd
+mkdir /home/$USER/projekty_zpxd
+cd /home/$USER/projekty_zpxd
 ```
 
-Na własnym komputerze projekty proponuje także trzymać w 1 miejscu:
-```
-cd
-mkdir projekty_zpxd
-cd projekty_zpxd
-```
+#### 4. Pobierz repozytorium:
 
-#### 4. Pobierz:
-
-W poniższy kod wstaw zamiast repo_url link który znajdziesz klikając w zielony przycisk "code" na głównej stronie repozytorium.
+W poniższy kod zamiast repo_url wstaw link który znajdziesz klikając w zielony przycisk "code" na głównej stronie repozytorium projektu.
 ```
 repo_url=None
 git clone $repo_url
@@ -94,11 +81,14 @@ pip3 install -r requirements.txt
 
 #### 7. Uruchom program:
 
-Jeżeli to aplikacja www:
+#### A. Projekt ze stroną www
 ```
 export FLASK_APP=app.py
 flask run
 ```
+
+#### B. Projekt w formie skryptu
+
 Jeżeli to skrypt, to zamień w poniższym poleceniu `nazwa_skryptu.py` na nazwę programu i go uruchomisz:
 ```
 python3 nazwa_skryptu.py
@@ -108,7 +98,7 @@ Aby sprawdzić zawartość plików w folderze, wpisz:
 ls -la
 ```
 
-#### Oglądaj rezultaty w przeglądarce
+### Oglądaj rezultaty w przeglądarce
 
 #### A: na własnym kompie:
 
