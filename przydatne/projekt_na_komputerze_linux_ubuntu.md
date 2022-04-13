@@ -9,7 +9,8 @@ TL;DR: jak masz serwer zajęciowy to wejdź na niego i będąc zalogowany na swo
 
 ### II. Pobierz i uruchom projekt:
 #### (git clone, środowisko, biblioteki i uruchomienie projektu)
-TL;DR: jak powyższe gra, to poznaj [url_repozytorium](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/url_repozytorium.md), skopiuj je i uruchom korzystając z poniższego kodu:
+
+TL;DR: jak powyższe gra, to poznaj [url_repozytorium](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/url_repozytorium.md), skopiuj je i uruchom korzystając z poniższego kodu (jeżeli była by potrzeba, tu jest [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/pobierz_i_uruchom_projekt_linux.md)):
 ```
 repo_url=tu_wklej_url
 ```
