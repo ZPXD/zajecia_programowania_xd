@@ -6,12 +6,12 @@ Kroki:
 3. Nauka
 4. Kontrybucja
 
-### I. Przygotowanie po Twojej stronie:
+#### I. Przygotowanie po Twojej stronie:
 #### (serwer, użytkownik, zainstalowane: python3, pip3, venv, git i otwórz terminal, wejdź w miejsce na projekt).
 
 TL;DR: jak masz poinstalowane python3, pip3, venv i git to będąc zalogowany na swojego użytkownika wejdź do folderu przeznaczonego na projekty i ruszaj dalej. Jak coś nie działa to tu jest dokładniejszy opis każdej z kwestii: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md).
 
-### II. Pobierz i uruchom projekt:
+#### II. Pobierz i uruchom projekt:
 #### (git clone, środowisko, biblioteki i uruchomienie projektu)
 
 TL;DR: jak powyższe gra, to poznaj [url_repozytorium](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/url_repozytorium.md), skopiuj je i uruchom korzystając z poniższego kodu (jeżeli była by potrzeba, tu jest [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/pobierz_i_uruchom_projekt_linux.md)):
@@ -51,11 +51,11 @@ Po odpaleniu aplikacji wejdź na http://127.0.0.1:5000/ u siebie na komputerze: 
 python3 nazwa_skryptu.py
 ```
 
-### III. Nauka
+#### III. Nauka
 
 Odpal projekt, poczytaj kod, poucz się na nim i poznaj jak działa. Dodaj element lub dwa, odejmij, modyfikuj. 
 
-### IV. Kontrybucja i rozwój
+#### IV. Kontrybucja i rozwój
 
 
 Aby dołączyć do rozwoju, przeczytaj pracy z git, o pracy z branchami i PR.
