@@ -28,6 +28,7 @@ su nazwa_uzytkownika
 
 #### 4. Miejsce
 Jeżeli wiesz gdzie chcesz uruchomić projekt aby działał, przejdź tam. Jeżeli nie:
+
 A. Projekty ze stroną www zakładaj w `/var/www`:
 ```
 cd /var/www
