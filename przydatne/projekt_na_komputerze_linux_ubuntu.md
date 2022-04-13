@@ -1,21 +1,25 @@
 ## Uruchom projekt u siebie na komputerze z systemem Linux Ubuntu 18/20
 
-#### Kroki
+Kroki:
 
 ### I. Przygotowanie po Twojej stronie i serwera:
 1. **Przygotowany serwer** - Jeżeli nie masz serwera, zdobądź go i przygotuj. O tym jest przygoda: [Szturm na AWS](https://github.com/ZPXD/flaga)
 2. **Programy wymagane wstępnie** - Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
-3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik
-4. **Miejsce** - Wejdź na serwerze do miejsca na projekt
+3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik (opis niżej)
+4. **Miejsce** - Wejdź na serwerze do miejsca na projekt (opis niżej)
 
 ### II. Pobierz i uruchom projekt:
 1. **Pobierz** - git clone
 2. **Przygotuj** - środowisko i biblioteki
 3. **Uruchom** - stronę lub skrypt
 
-W skrócie:
+W skrócie, jeżeli masz gotowy serwer i jesteś jako właściwy użytkownik we właściwym folderze, ustal url_repo [url_repozytorium](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/url_repozytorium.md):
 ```
-git clone repo_url
+repo_url=tu_wklej_url
+```
+I wklej wszystkie poniższe linie:
+```
+git clone $repo_url
 srodowisko="${PWD##*/}env"
 srodowisko=${srodowisko%.*}_${srodowisko##*.}
 python3 -m venv $srodowisko
@@ -31,6 +35,9 @@ a jeżeli projekt ma formę skryptu:
 ```
 python3 nazwa_skryptu.py
 ```
+
+
+## I. Przygotowanie po Twojej stronie i serwera:
 
 #### 1. Jeżeli nie masz serwera, zdobądź go i przygotuj.
 Temu dedykowana jest przygoda [Szturm na AWS](https://github.com/ZPXD/flaga).
@@ -60,7 +67,9 @@ mkdir /home/$USER/projekty_zpxd
 cd /home/$USER/projekty_zpxd
 ```
 
-#### 5. Pobierz repozytorium:
+## II. Pobierz i uruchom projekt:
+
+#### 1. Pobierz repozytorium:
 
 1. Wejdź na stornę główną repozytorium projektu - np. `https://github.com/ZPXD/arena.xd`.
 2. Znajdź zielony przycisk `code`
@@ -70,7 +79,7 @@ cd /home/$USER/projekty_zpxd
 git clone repo_url
 ```
 
-#### 6. Uruchom środowisko:
+#### 2. Uruchom środowisko:
 
 Pierwsze dwie linie przypisują do zmiennej nazwę środowiska a ostatnie dwie je tworzą i aktywują.
 
@@ -87,27 +96,25 @@ Aby wyjść ze środowiska, wpisz:
 deactivate
 ```
 
-#### 7. Zainstaluj wymagane biblioteki:
+#### Zainstaluj wymagane biblioteki:
 Dalej będąc w środowisku (!) wpisz:
 ```
 pip3 install -r requirements.txt
 ```
 
-#### 8. Uruchom program:
+#### 3. Uruchom program:
 
-#### A. Projekt ze stroną www
+A. Projekt w formie  **strony www**
 ```
 export FLASK_APP=app.py
 flask run
 ```
 
-#### B. Projekt w formie skryptu
-
-Jeżeli to skrypt, to zamień w poniższym poleceniu `nazwa_skryptu.py` na nazwę programu i go uruchomisz:
+B. Projekt **w formie skryptu** - zamień w poniższym poleceniu `nazwa_skryptu.py` na nazwę programu i go uruchomisz:
 ```
 python3 nazwa_skryptu.py
 ```
-Aby sprawdzić zawartość plików w folderze, wpisz:
+Aby sprawdzić pliki w repozytorium (w folderze projektu), wpisz:
 ```
 ls -la
 ```
