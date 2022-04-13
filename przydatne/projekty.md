@@ -13,15 +13,41 @@ Jeżeli w pliku README.md projektu nie jest opisane inaczej, wykonaj następują
 
 Będąc na przygotowanym serwerze albo u siebie na przygotowanym komputerze (przygotowanym czyli masz git, python3, pip3, venv, ssh).
 
-#### Pobierz:
+Upewnij się, że jesteś zalogowany jako użytkownik w folderze w którym chcesz zapisać projekt. 
 
-Upewnij się, że jesteś zalogowany jako użytkownik w folderze w którym chcesz zapisać projekt. W poniższy kod wstaw zamiast repo_url link który znajdziesz klikając w zielony przycisk "code" na głównej stronie repozytorium.
+#### 1. Użytkownik
+
+Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Wstaw pod `nazwa_uzytkownika` nazwę jaką masz na serwerze lub na swoim komputerze.
+```
+su nazwa_uzytkownika
+```
+
+#### 2. Miejsce
+
+Jeżeli jesteś u siebie na komputerze, to może być:
+```
+cd
+mkdir projekty_zpxd
+cd projekty_zpxd
+```
+Jeżeli jesteś na serwerze zajęciowym, spróbuj:
+```
+cd /var/www
+``` 
+lub
+```
+cd /home/$USER
+```
+
+#### 3 Pobierz:
+
+W poniższy kod wstaw zamiast repo_url link który znajdziesz klikając w zielony przycisk "code" na głównej stronie repozytorium.
 ```
 repo_url=None
 git clone $repo_url
 ```
 
-#### Uruchom środowisko:
+#### 4. Uruchom środowisko:
 
 Pierwsze dwie linie przypisują do zmiennej nazwę środowiska a ostatnie dwie je tworzą i aktywują.
 
@@ -39,12 +65,12 @@ Aby wyjść ze środowiska, wpisz:
 deactivate
 ```
 
-#### Zainstaluj wymagane biblioteki:
+#### 5. Zainstaluj wymagane biblioteki:
 ```
 pip3 install -r requirements.txt
 ```
 
-#### Uruchom program:
+#### 6. Uruchom program:
 
 ```
 export FLASK_APP=app.py
