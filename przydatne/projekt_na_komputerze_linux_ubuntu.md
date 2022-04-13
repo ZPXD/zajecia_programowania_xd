@@ -8,9 +8,9 @@ Potrzebujesz na serwerze Linuxie Ubuntu co następuje:
 2. pip3 
 3. venv
 
-Jeżeli czegoś Ci brakuje, uruchom skrypt `server_preparation_project.sh` wpisując:
+Jeżeli czegoś Ci brakuje, uruchom skrypt `server_preparation_for_project.sh` wpisując:
 ```
-bash server_preparation_project.sh
+bash server_preparation_for_project.sh
 ```
 Lub uruchom poniższe polecenia:
 ```
@@ -20,17 +20,16 @@ apt install python3-pip
 pip3 install virtualenv
 ```
 
-
 Upewnij się, że jesteś zalogowany jako użytkownik w folderze w którym chcesz zapisać projekt. 
 
-#### 1. Użytkownik
+#### 2. Użytkownik
 
 Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Wstaw pod `nazwa_uzytkownika` nazwę jaką masz na serwerze lub na swoim komputerze.
 ```
 su nazwa_uzytkownika
 ```
 
-#### 2. Miejsce
+#### 3. Miejsce
 
 Na serwerze zajęciowym dobry folder na projekty które są uruchamiane także w formie www to `/var/www`. Wejdziesz tam wpisując w terminalu:
 ```
@@ -50,7 +49,7 @@ mkdir projekty_zpxd
 cd projekty_zpxd
 ```
 
-#### 3 Pobierz:
+#### 4. Pobierz:
 
 W poniższy kod wstaw zamiast repo_url link który znajdziesz klikając w zielony przycisk "code" na głównej stronie repozytorium.
 ```
@@ -76,12 +75,12 @@ Aby wyjść ze środowiska, wpisz:
 deactivate
 ```
 
-#### 5. Zainstaluj wymagane biblioteki:
+#### 6. Zainstaluj wymagane biblioteki:
 ```
 pip3 install -r requirements.txt
 ```
 
-#### 6. Uruchom program:
+#### 7. Uruchom program:
 
 Jeżeli to aplikacja www:
 ```
