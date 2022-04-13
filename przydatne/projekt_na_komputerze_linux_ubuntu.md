@@ -1,8 +1,6 @@
 ## Uruchom projekt u siebie na komputerze z systemem Linux Ubuntu 18/20
 
-#### Kroki:
-
-Przygotowanie:
+#### Kroki
 1. **Przygotowany serwer** - Jeżeli nie masz serwera, zdobądź go i przygotuj [Szturm na AWS](https://github.com/ZPXD/flaga)
 2. **Programy wymagane wstępnie** - Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
 3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik
