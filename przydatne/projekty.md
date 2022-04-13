@@ -15,9 +15,10 @@ Będąc na przygotowanym serwerze albo u siebie na przygotowanym komputerze (prz
 
 #### Pobierz:
 
+Upewnij się, że jesteś zalogowany jako użytkownik w folderze w którym chcesz zapisać projekt. W poniższy kod wstaw zamiast repo_url link który znajdziesz klikając w zielony przycisk "code" na głównej stronie repozytorium.
 ```
-cd /var/www
-git clone https://github.com/ZPXD/what_what.git/
+repo_url=None
+git clone $repo_url
 ```
 
 #### Uruchom środowisko:
