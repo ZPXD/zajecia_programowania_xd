@@ -26,9 +26,8 @@ Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżel
 su nazwa_uzytkownika
 ```
 
-#### 3. Miejsce
+#### 4. Miejsce
 Jeżeli wiesz gdzie chcesz uruchomić projekt aby działał, przejdź tam. Jeżeli nie:
-
 A. Projekty ze stroną www zakładaj w `/var/www`:
 ```
 cd /var/www
@@ -39,7 +38,7 @@ mkdir /home/$USER/projekty_zpxd
 cd /home/$USER/projekty_zpxd
 ```
 
-#### 4. Pobierz repozytorium:
+#### 5. Pobierz repozytorium:
 
 1. Wejdź na stornę główną repozytorium projektu - np. `https://github.com/ZPXD/arena.xd`.
 2. Znajdź zielony przycisk `code`
@@ -49,7 +48,7 @@ cd /home/$USER/projekty_zpxd
 git clone repo_url
 ```
 
-#### 5. Uruchom środowisko:
+#### 6. Uruchom środowisko:
 
 Pierwsze dwie linie przypisują do zmiennej nazwę środowiska a ostatnie dwie je tworzą i aktywują.
 
@@ -67,12 +66,12 @@ Aby wyjść ze środowiska, wpisz:
 deactivate
 ```
 
-#### 6. Zainstaluj wymagane biblioteki:
+#### 7. Zainstaluj wymagane biblioteki:
 ```
 pip3 install -r requirements.txt
 ```
 
-#### 7. Uruchom program:
+#### 8. Uruchom program:
 
 #### A. Projekt ze stroną www
 ```
