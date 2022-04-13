@@ -1,4 +1,4 @@
-## Uruchom projekt u siebie na komputerze z systemem Linux Ubuntu 18/20
+## Uruchom projekt na serwerze z systemem Linux Ubuntu 18/20
 
 Kroki:
 
