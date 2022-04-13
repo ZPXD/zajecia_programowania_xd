@@ -1,5 +1,17 @@
 ## Uruchom projekt u siebie na komputerze z systemem Linux Ubuntu 18/20
 
+#### Kroki:
+
+Przygotowanie:
+1. Jeżeli nie masz serwera, zdobądź go i przygotuj.
+2. Zainstaluj wymagane oprogramowanie
+3. Miejsce na projekt
+4. Użytkownik
+
+Projekt:
+5. Pobierz
+6. Przygotuj środowisko projektu i biblioteki
+7. Uruchom
 
 #### 1. Przygotowanie wymaganego oprogramowania:
 
@@ -10,7 +22,7 @@ Potrzebujesz na serwerze Linuxie Ubuntu co następuje:
 
 Jeżeli czegoś Ci brakuje, uruchom skrypt `server_preparation_for_project.sh` wpisując:
 ```
-bash server_preparation_for_project.sh
+wget -q 'https://raw.githubusercontent.com/ZPXD/zajecia_programowania_xd/main/przydatne/server_preparation_for_project.sh' && chmod +x server_preparation_for_project.sh && ./server_preparation_for_project.sh;
 ```
 Lub uruchom poniższe polecenia:
 ```
