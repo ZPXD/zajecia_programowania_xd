@@ -4,6 +4,7 @@ Potrzebujesz na serwerze Linuxie Ubuntu co następuje:
 1. python3
 2. pip3 
 3. venv
+4. git
  
 Jeżeli czegoś Ci brakuje, uruchom skrypt `server_preparation_for_project.sh` zdalnie wpisując:
 ```
@@ -15,5 +16,6 @@ Skrypt uruchomi poniższe polecenia:
 apt update
 apt install python3-pip python3-dev python3-venv build-essential libssl-dev libffi-dev python3-setuptools --yes
 apt install python3-pip
+apt install git
 pip3 install virtualenv 
 ```
