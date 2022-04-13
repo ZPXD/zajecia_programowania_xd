@@ -1,8 +1,25 @@
 ## Uruchom projekt u siebie na komputerze z systemem Linux Ubuntu 18/20
 
-## Jak uruchomić:
 
-Będąc na przygotowanym serwerze albo u siebie na przygotowanym komputerze (przygotowanym czyli masz git, python3, pip3, venv, ssh).
+#### 1. Przygotowanie wymaganego oprogramowania:
+
+Potrzebujesz na serwerze Linuxie Ubuntu co następuje: 
+1. python3
+2. pip3 
+3. venv
+
+Jeżeli czegoś Ci brakuje, uruchom skrypt `server_preparation_project.sh` wpisując:
+```
+bash server_preparation_project.sh
+```
+Lub uruchom poniższe polecenia:
+```
+apt update
+apt install python3-pip python3-dev python3-venv build-essential libssl-dev libffi-dev python3-setuptools --yes
+apt install python3-pip
+pip3 install virtualenv
+```
+
 
 Upewnij się, że jesteś zalogowany jako użytkownik w folderze w którym chcesz zapisać projekt. 
 
