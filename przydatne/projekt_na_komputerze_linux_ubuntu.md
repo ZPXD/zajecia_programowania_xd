@@ -3,23 +3,25 @@
 #### Kroki:
 
 Przygotowanie:
-1. Jeżeli nie masz serwera, zdobądź go i przygotuj [Szturm na AWS](https://github.com/ZPXD/flaga)
-2. Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
-3. Użytkownik []()
-4. Miejsce na projekt []()
+1. **Przygotowany serwer** - Jeżeli nie masz serwera, zdobądź go i przygotuj [Szturm na AWS](https://github.com/ZPXD/flaga)
+2. **Programy wymagane wstępnie** - Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
+3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik z właściwymi uprawnieniami
+4. **Folder** - Miejsce na projekt
 
 Projekt:
-5. Pobierz
-6. Przygotuj środowisko projektu i biblioteki
-7. Uruchom
+5. **Pobierz** - git clone
+6. **Przygotuj** - środowisko i biblioteki
+7. **Uruchom** - stronę lub skrypt
 
 #### 1. Jeżeli nie masz serwera, zdobądź go i przygotuj.
 Temu dedykowana jest przygoda [Szturm na AWS](https://github.com/ZPXD/flaga).
 
 #### 2. Zainstaluj wymagane oprogramowanie
+Potrzebujesz: **git, python3, pip3 i venv**. Jeżeli Szturm na AWS masz za sobą, to masz je zainstalowane. Jeżeli nie, przeczytaj: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.md). Jednak w praktyce zainstalujesz wymagane oprogramowanie w kilkanaście sekund dzięki poniższemu skryptowi:
 ```
 wget -q 'https://raw.githubusercontent.com/ZPXD/zajecia_programowania_xd/main/przydatne/server_preparation_for_project.sh' && chmod +x server_preparation_for_project.sh && ./server_preparation_for_project.sh;
 ```
+
 #### 3. Użytkownik
 Zaloguj się na swojego użytkownika na serwerze lub na swoim komputerze. Jeżeli jeszcze nie masz użytkownika na serwerze, stwórz go: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/linux_uzytkownik.md).
 ```
