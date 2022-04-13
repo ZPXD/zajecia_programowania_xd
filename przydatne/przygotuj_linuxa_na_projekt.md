@@ -17,4 +17,3 @@ apt install python3-pip python3-dev python3-venv build-essential libssl-dev libf
 apt install python3-pip
 pip3 install virtualenv 
 ```
-
