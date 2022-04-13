@@ -5,10 +5,8 @@
 Przygotowanie:
 1. **Przygotowany serwer** - Jeżeli nie masz serwera, zdobądź go i przygotuj [Szturm na AWS](https://github.com/ZPXD/flaga)
 2. **Programy wymagane wstępnie** - Zainstaluj wymagane oprogramowanie [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.sh)
-3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik z właściwymi uprawnieniami
+3. **Użytkownik** - Bądź zalogowany jako właściwy użytkownik
 4. **Folder** - Miejsce na projekt
-
-Projekt:
 5. **Pobierz** - git clone
 6. **Przygotuj** - środowisko i biblioteki
 7. **Uruchom** - stronę lub skrypt
@@ -17,7 +15,7 @@ Projekt:
 Temu dedykowana jest przygoda [Szturm na AWS](https://github.com/ZPXD/flaga).
 
 #### 2. Zainstaluj wymagane oprogramowanie
-Potrzebujesz: **git, python3, pip3 i venv**. Jeżeli Szturm na AWS masz za sobą, to masz je zainstalowane. Jeżeli nie, przeczytaj: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.md). Jednak w praktyce zainstalujesz wymagane oprogramowanie w kilkanaście sekund dzięki poniższemu skryptowi:
+Potrzebujesz: **git, python3, pip3 i venv**. Jeżeli Szturm na AWS masz za sobą, to masz je zainstalowane. Jeżeli nie, przeczytaj: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_linuxa_na_projekt.md). lub zainstaluj odpalając poniższy skrypt:
 ```
 wget -q 'https://raw.githubusercontent.com/ZPXD/zajecia_programowania_xd/main/przydatne/server_preparation_for_project.sh' && chmod +x server_preparation_for_project.sh && ./server_preparation_for_project.sh;
 ```
@@ -61,7 +59,6 @@ srodowisko=${srodowisko%.*}_${srodowisko##*.}
 python3 -m venv $srodowisko
 source $srodowisko/bin/activate
 ```
-
 Środowisko projektu będzie zawsze miało nazwę folderu repozytorium + "env" z "_" zamiast kropek.
 
 Aby wyjść ze środowiska, wpisz:
@@ -70,6 +67,7 @@ deactivate
 ```
 
 #### 7. Zainstaluj wymagane biblioteki:
+Dalej będąc w środowisku (!) wpisz:
 ```
 pip3 install -r requirements.txt
 ```
