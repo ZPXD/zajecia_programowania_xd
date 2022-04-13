@@ -34,11 +34,11 @@ a jeżeli projekt ma formę skryptu (sprawdzisz skrypty w folderze wpisując `ls
 ```
 python3 nazwa_skryptu.py
 ```
-#### III. Nauka
+### III. Nauka
 
 Odpal projekt, poczytaj kod, poucz się na nim i poznaj jak działa. Dodaj element lub dwa, odejmij, modyfikuj. 
 
-#### IV. Kontrybucja i rozwój
+### IV. Kontrybucja i rozwój
 
 
 Aby dołączyć do rozwoju, przeczytaj pracy z git, o pracy z branchami i PR.
