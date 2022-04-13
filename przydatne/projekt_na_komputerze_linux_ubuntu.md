@@ -57,7 +57,7 @@ repo_url=None
 git clone $repo_url
 ```
 
-#### 4. Uruchom środowisko:
+#### 5. Uruchom środowisko:
 
 Pierwsze dwie linie przypisują do zmiennej nazwę środowiska a ostatnie dwie je tworzą i aktywują.
 
