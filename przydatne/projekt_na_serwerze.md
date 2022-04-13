@@ -1,6 +1,10 @@
 ## Uruchom projekt na serwerze z systemem Linux Ubuntu 18/20
 
 Kroki:
+1. Przygotowanie po Twojej stronie (komputer, wymagania, użytkownik, folder)
+2. Pobierz i uruchom projekt
+3. Nauka
+4. Kontrybucja
 
 ### I. Przygotowanie po Twojej stronie:
 #### (Komputer, użytkownik, zainstalowane: python3, pip3, venv, git i otwórz terminal, wejdź w miejsce na projekt).
