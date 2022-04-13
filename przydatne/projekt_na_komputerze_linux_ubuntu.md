@@ -5,7 +5,7 @@ Kroki:
 ### I. Przygotowanie po Twojej stronie:
 #### (Komputer, użytkownik, zainstalowane: python3, pip3, venv, git i otwórz terminal, wejdź w miejsce na projekt).
 
-TL;DR: jak masz serwer zajęciowy to wejdź na niego i będąc zalogowany na swojego użytkownika wejdź do folderu przeznaczonego na projekty. Tu dokładniejszy opis każdej z kwestii: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md).
+TL;DR: jak masz poinstalowane python3, pip3, venv i git to będąc zalogowany na swojego użytkownika wejdź do folderu przeznaczonego na projekty i ruszaj dalej. Jak coś nie działa to tu jest dokładniejszy opis każdej z kwestii: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md).
 
 ### II. Pobierz i uruchom projekt:
 #### (git clone, środowisko, biblioteki i uruchomienie projektu)
