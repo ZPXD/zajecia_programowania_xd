@@ -3,7 +3,7 @@
 Kroki:
 
 ### I. Przygotowanie po Twojej stronie:
-#### (Komputer, użytkownik, programy wstępnie wymagane i miejsce na projekt).
+#### (Komputer, użytkownik, zainstalowane: python3, pip3, venv, git i otwórz terminal, wejdź w miejsce na projekt).
 
 TL;DR: jak masz serwer zajęciowy to wejdź na niego i będąc zalogowany na swojego użytkownika wejdź do folderu przeznaczonego na projekty. Tu dokładniejszy opis każdej z kwestii: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md).
 
@@ -34,74 +34,14 @@ a jeżeli projekt ma formę skryptu (sprawdzisz skrypty w folderze wpisując `ls
 ```
 python3 nazwa_skryptu.py
 ```
+#### III. Nauka
 
-## Dokładny opis: 
+Odpal projekt, poczytaj kod, poucz się na nim i poznaj jak działa. Dodaj element lub dwa, odejmij, modyfikuj. 
 
-#### 1. Pobierz repozytorium:
-
-1. Wejdź na stornę główną repozytorium projektu - np. `https://github.com/ZPXD/arena.xd`.
-2. Znajdź zielony przycisk `code`
-3. Skopiuj url `https://github.com/ZPXD/arena.xd.git`
-4. Uruchom poniższą komendę zamieniając `repo_url` na skopiowany w poprzednim kroku url projektu
-```
-git clone repo_url
-```
-
-#### 2. Uruchom środowisko i zainstaluj biblioteki:
-
-Pierwsze dwie linie przypisują do zmiennej nazwę środowiska a ostatnie dwie je tworzą i aktywują.
-
-```
-srodowisko="${PWD##*/}env"
-srodowisko=${srodowisko%.*}_${srodowisko##*.}
-python3 -m venv $srodowisko
-source $srodowisko/bin/activate
-```
-Środowisko projektu będzie zawsze miało nazwę folderu repozytorium + "env" z "_" zamiast kropek.
-
-Aby wyjść ze środowiska, wpisz:
-```
-deactivate
-```
-
-#### Zainstaluj wymagane biblioteki:
-Dalej będąc w środowisku (!) wpisz:
-```
-pip3 install -r requirements.txt
-```
-
-#### 3. Uruchom program:
-
-A. Projekt w formie  **strony www**
-```
-export FLASK_APP=app.py
-flask run
-```
-
-B. Projekt **w formie skryptu** - zamień w poniższym poleceniu `nazwa_skryptu.py` na nazwę programu i go uruchomisz:
-```
-python3 nazwa_skryptu.py
-```
-Aby sprawdzić pliki w repozytorium (w folderze projektu), wpisz:
-```
-ls -la
-```
-
-### Oglądaj rezultaty w przeglądarce
-
-Po odpaleniu aplikacji wejdź na http://127.0.0.1:5000/
+#### IV. Kontrybucja i rozwój
 
 
-
-### Co dalej?
-
-#### A. Nauka
-
-J/W.
-
-#### B. Kontrybucja i rozwój
-
-Aby dołączyć do rozwoju, przeczytaj o pracy z branchami.
+Aby dołączyć do rozwoju, przeczytaj pracy z git, o pracy z branchami i PR.
 
 ```
 link_repo=None
