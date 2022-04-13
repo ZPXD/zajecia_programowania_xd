@@ -5,14 +5,11 @@ Kroki:
 ### I. Przygotowanie po Twojej stronie:
 #### (Komputer, użytkownik, programy wstępnie wymagane i miejsce na projekt).
 
-TL;DR: jak masz serwer zajęciowy to wejdź na niego i będąc zalogowany na swojego użytkownika wejdź do folderu na projekty. Jak byś miał wątpliwości to tu opis w krokach i dokładniejsze opisy: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md)
+TL;DR: jak masz serwer zajęciowy to wejdź na niego i będąc zalogowany na swojego użytkownika wejdź do folderu przeznaczonego na projekty. Tu dokładniejszy opis każdej z kwestii: [Instrukcja](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/przygotuj_komputer_z_linuxem_na_projekt.md).
 
 ### II. Pobierz i uruchom projekt:
-1. **Pobierz** - git clone
-2. **Przygotuj** - środowisko i biblioteki
-3. **Uruchom** - stronę lub skrypt
-
-W skrócie, jeżeli masz gotowy serwer i jesteś jako właściwy użytkownik we właściwym folderze, ustal url_repo [url_repozytorium](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/url_repozytorium.md):
+#### (git clone, środowisko, biblioteki i uruchomienie projektu)
+TL;DR: jak powyższe gra, to poznaj [url_repozytorium](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/url_repozytorium.md), skopiuj je i uruchom korzystając z poniższego kodu:
 ```
 repo_url=tu_wklej_url
 ```
@@ -30,7 +27,9 @@ i jeżeli projekt ma formę strony www:
 export FLASK_APP=app.py
 flask run
 ```
-a jeżeli projekt ma formę skryptu:
+Po odpaleniu aplikacji wejdź na http://127.0.0.1:5000/ 
+
+a jeżeli projekt ma formę skryptu (sprawdzisz skrypty w folderze wpisując `ls`):
 ```
 python3 nazwa_skryptu.py
 ```
