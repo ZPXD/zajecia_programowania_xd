@@ -22,9 +22,20 @@ git clone https://github.com/ZPXD/what_what.git/
 
 #### Uruchom środowisko:
 
+Pierwsze dwie linie przypisują do zmiennej nazwę środowiska a ostatnie dwie je tworzą i aktywują.
+
 ```
-python3 -m venv flagaenv
-source flagaenv/bin/activate
+srodowisko="${PWD##*/}env"
+srodowisko=${srodowisko%.*}_${srodowisko##*.}
+python3 -m venv $srodowisko
+source $srodowisko/bin/activate
+```
+
+Środowisko projektu będzie zawsze miało nazwę folderu repozytorium + "env" z "_" zamiast kropek.
+
+Aby wyjść ze środowiska, wpisz:
+```
+deactivate
 ```
 
 #### Zainstaluj wymagane biblioteki:
