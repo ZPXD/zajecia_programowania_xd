@@ -12,6 +12,8 @@
 
 ### Uruchom nowy terminal Git Bash
 
+<img src="images/new_terminal1.png" width=50%><img src="images/git_bash2.png" width=50%>
+
 
 Uruchom poniższą komendę zamieniając `repo_url` na skopiowany w poprzednim kroku url projektu
 ```
