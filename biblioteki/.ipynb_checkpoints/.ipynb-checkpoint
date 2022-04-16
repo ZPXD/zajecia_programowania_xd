@@ -4,13 +4,16 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Biblioteka time i datetime\n",
+    "# Czas i data\n",
+    "\n",
+    "## Biblioteki czasu - datetime i przyjaciele\n",
     "\n",
     "Daty, czas.\n",
     "\n",
     "[Dokumentacja time](https://docs.python.org/3/library/time.html)\n",
     "\n",
     "[Dokumentacja datetime](https://docs.python.org/3/library/datetime.html)\n",
+    "\n",
     "\n",
     "\n",
     "Level 1\n",
@@ -27,7 +30,7 @@
    "source": [
     "### Uwaga wstępna\n",
     "\n",
-    "Czas to spore zagadnienie. Tak jak wiele bibliotek pomaga w obliczeniach tak i jest w Pythonie wiele bibliotek które zajmują się czasem. Najczęściej używane rozwiązania to wspomniane wyżej `time` i `datetime`. Są jeszcze [`calendar`](https://docs.python.org/3/library/calendar.html) i [`locale`](https://docs.python.org/3/library/locale.html#module-locale). \n",
+    "Czas to spore zagadnienie. Tak jak wiele bibliotek pomaga w obliczeniach tak i jest w Pythonie wiele bibliotek które zajmują się czasem. Najczęściej używane rozwiązania to wspomniane wyżej `time` i `datetime`. Są jeszcze [dateutil](https://dateutil.readthedocs.io/en/stable/changelog.html), [calendar](https://docs.python.org/3/library/calendar.html) i [locale](https://docs.python.org/3/library/locale.html#module-locale). \n",
     "\n",
     "Biblioteki time i datetime używają klas obiektów odpowiedzialnych za pracę na czasie. Warto je rozróżniać z 2 powodów, po pierwsze to przydatne i ułatwia posługiwanie się danymi czasowymi a po drugie dwa z obiektów czasu używanych przez te biblioteki mają tę samą nazwę - time -  i łatwo się pomylić gdy używa się obu rodzajów obiektów na raz. Gdy nie jesteś pewien - a tak jest zwykle na początku - wybierz 1 rozwiązanie i trzymaj się go a drugiego używaj wtedy gdy to będzie potrzebne w niekolidujący sposób. \n",
     "\n",
@@ -53,6 +56,8 @@
     "\n",
     "#### `import time`:\n",
     "1. Zatrzymaj działanie programu na N sekund - `time.sleep(N)` <--------------------  **!!!!!!!!**  \n",
+    "\n",
+    "#### potem\n",
     "2. Sprawdź dokładnie aktualny czas - np. `time.time()`\n",
     "3. Szybko stwórz datę jako tekst - `time.asctime()` lub obiekt ale nie datetime - `time.gmtime()`, `time.localtime()`\n",
     "\n",
@@ -68,35 +73,181 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### W skrócie"
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": null,
    "metadata": {},
    "outputs": [],
    "source": [
-    "from datetime import datetime, timedelta\n",
+    "# 1. Czas\n",
+    "import time\n",
+    "time.sleep(10) # Zatrzymaj program na 10 sekund\n",
     "\n",
-    "from datetime import timezone "
+    "# 2. Czas teraz\n",
+    "from datetime import datetime\n",
+    "obiekt_daty1 = datetime.now(tz=None) # Czas teraz\n",
+    "\n",
+    "# 3. Inny czas\n",
+    "obiekt_daty2 = datetime(2022, 10, 1, 10, 1) # Inny czas\n",
+    "\n",
+    "# 4. Wybierz informacje z obiektu daty - np. dzień lub rok\n",
+    "rok, miesiac = obiekt_daty.year, obiekt_daty.month\n",
+    "\n",
+    "# 5. Zmień czas \n",
+    "obiekt_daty = obiekt_daty.replace(hour=10)\n",
+    "\n",
+    "# 6. Zamień obiekt daty na tekst\n",
+    "data_obiekt = datetime.today()\n",
+    "data_tekst = data_obiekt.strftime('%Y-%m-%d' )\n",
+    "\n",
+    "# 7. Zamień tekst na obiekt daty\n",
+    "from dateutil import parser\n",
+    "obiekt_daty = parser.parse(\"20-02-1991\")\n",
+    "\n",
+    "# 8. Roznica czasu\n",
+    "roznica_czasu = obiekt_daty1 - obiekt_daty2\n",
+    "roznica_czasu = timedelta(hours=2)\n",
+    "\n",
+    "# 9. Dzialania na czasie\n",
+    "obiekt_daty = obiekt_daty - roznica_czasu\n",
+    "obiekt_daty = obiekt_daty + roznica_czasu\n",
+    "\n",
+    "# 10. Porównuj daty\n",
+    "if obiekt_daty1 == obiekt_daty2:\n",
+    "    pass\n",
+    "\n",
+    "# 11. Ktora data jest nowsza?\n",
+    "if obiekt_daty1 > obiekt_daty2:\n",
+    "    print(1)\n",
+    "else:\n",
+    "    print(2)"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Daty: najważniejsze problemy i rozwiązania\n",
-    "\n",
-    "dla uproszczenia do pracy z datą użyjemy 2 obiektów `timedelta` który zajmuje się różnicami czasu i `datetime` który zawiera pełną informację o czasie i składają się na niego 3 elementy którymi zajmują się 3 obiekty:\n",
-    "1. kalendarzowe - dzień, miesiąc, rok a którymi szczególnie zajmuje się obiekt `datetime.date`, \n",
-    "2. jaki informacje o godzinie, minucie, sekundzie - bliskie obiektowi `datetime.time`,\n",
-    "3. oraz o strefie czasowej - omawiane przy okazji obiektu `datetime.timezone`."
+    "### 1. Czas"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### 1. Czas teraz\n",
+    "####  Zatrzymaj działanie programu na N sekund - `time.sleep(N)`\n",
+    "\n",
+    "Odpal poniższą komórkę. Po każdej iteracji program wstrzyma się na 2 sekundy. Ta metoda przydaje się np. gdy łączymy się z innymi serwerami, albo chcemy aby ktoś odczekał zanim ponownie wykona akcję (np. logowania czy wysłania wiadomości)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 324,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n",
+      "6\n",
+      "7\n"
+     ]
+    }
+   ],
+   "source": [
+    "import time\n",
+    "\n",
+    "for i in range(8):\n",
+    "    print(i)\n",
+    "    time.sleep(2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 2. Czas teraz\n",
     "\n",
     "jako obiekt daty `datetime`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 381,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from datetime import datetime # obiekt czasu"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "teraz"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 377,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime(2022, 4, 16, 15, 17, 55, 858209)"
+      ]
+     },
+     "execution_count": 377,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "czas_teraz = datetime.now()\n",
+    "czas_teraz"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### obiekt `datetime`\n",
+    "\n",
+    "O tym obiekcie (oraz jego reprezentacji tekstowej) będzie reszta tego poziomu. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 380,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime"
+      ]
+     },
+     "execution_count": 380,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(czas_teraz)"
    ]
   },
   {
@@ -166,19 +317,19 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 200,
+   "execution_count": 375,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "2022-04-16 00:08:38.441918\n"
+      "2022-04-16 15:17:38.128660\n"
      ]
     }
    ],
    "source": [
-    "tz = datetime.now()\n",
+    "tz = timezone.utc\n",
     "tz = None\n",
     "\n",
     "print(datetime.now(tz=tz))"
@@ -188,7 +339,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### 2. Inny czas\n",
+    "### 3. Inny czas\n",
     "\n",
     "Obiekt `datetime` możesz tworzyć przekazując mu informacje o dacie i godzinie. Te same informacje możesz też z niego wybrać albo je modyfikować. Zacznij od tworzenia:"
    ]
@@ -257,7 +408,49 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Informacje z obiektu daty - np. gdy interesuje Cię jedynie dzień lub rok"
+    "### 4. Wybierz informacje z obiektu daty - np. dzień lub rok"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 360,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2022"
+      ]
+     },
+     "execution_count": 360,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data = datetime.today()\n",
+    "\n",
+    "data.year"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 361,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "15"
+      ]
+     },
+     "execution_count": 361,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data.hour"
    ]
   },
   {
@@ -313,7 +506,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Zmień czas \n",
+    "### 5. Zmień czas \n",
     "\n",
     "istniejącego obiektu daty `datatime`\n",
     "\n",
@@ -369,34 +562,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 220,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "datetime.datetime(2022, 4, 16, 0, 49, 3, 93833, tzinfo=datetime.timezone(datetime.timedelta(seconds=7200), 'CEST'))"
-      ]
-     },
-     "execution_count": 220,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "obiekt_daty.astimezone(tz=tz)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### Przy okazji strefy czasowej"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 228,
+   "execution_count": 233,
    "metadata": {},
    "outputs": [
     {
@@ -405,21 +571,12 @@
        "datetime.datetime(2022, 4, 15, 22, 49, 3, 93833, tzinfo=datetime.timezone.utc)"
       ]
      },
-     "execution_count": 228,
+     "execution_count": 233,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "strefy_czasowe = [\n",
-    "    timedelta(hours=4), # przesunięcie o N godzin\n",
-    "    timezone.utc,       # czas UTC\n",
-    "    None,               # brak wyboru - strefa lokalna dla Twojego komputera, serwera lub miejsca gdzie jest skrypt\n",
-    "]\n",
-    "\n",
-    "\n",
-    "tz=None\n",
-    "\n",
     "obiekt_daty.astimezone(tz=timezone.utc)"
    ]
   },
@@ -427,41 +584,494 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Zamiana obiektu daty `datetime` w tekst"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 218,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "datetime.datetime(2022, 4, 16, 0, 49, 3, 93833)"
-      ]
-     },
-     "execution_count": 218,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "obiekt_daty = datetime.today()\n",
+    "###6. Sprawne przekształcanie tekstu w obiekt daty i spowrotem\n",
     "\n",
-    "obiekt_daty"
+    "\n",
+    "    A. datetime -> str\n",
+    "    B. str -> `datetime\n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### obiekt daty `datetime` -> `str` -  wg. formatu ISO"
+    "## A. `datetime` -> `str`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Format ISO"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 219,
+   "execution_count": 333,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'2022-04-16T13:36:19.273134'"
+      ]
+     },
+     "execution_count": 333,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from datetime import datetime \n",
+    "\n",
+    "data_obiekt = datetime.today()\n",
+    "\n",
+    "data_obiekt.isoformat()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Format taki jaki chcesz wybrać\n",
+    "\n",
+    "Datę można rozpisać na wiele sposobów. Używając `strftime` Ty decydujesz. W kolejnych w materiałach o dacie znajdziesz więcej informacji o zapisie daty."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 338,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'2022-04-16'"
+      ]
+     },
+     "execution_count": 338,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data_obiekt = datetime.today()\n",
+    "data_format = '%Y-%m-%d' \n",
+    "\n",
+    "data_obiekt.strftime(date_format)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## B. `str` -> `datetime`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Na szybko"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 355,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime(1991, 2, 20, 0, 0)"
+      ]
+     },
+     "execution_count": 355,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "from dateutil import parser\n",
+    "\n",
+    "data_str = \"20-02-1991\"\n",
+    "\n",
+    "parser.parse(data_str)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 6. Porównuj daty\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 372,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "obiekt_daty_1 = datetime(year=2000, month=12, day=30)\n",
+    "obiekt_daty_2 = datetime(year=2000, month=12, day=30)\n",
+    "\n",
+    "obiekt_daty_3 = datetime(year=1000, month=10, day=10)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Czy data A i data B są takie same?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 286,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "if obiekt_daty_1 == obiekt_daty_2:\n",
+    "    print(True)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 287,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "if obiekt_daty_1 == obiekt_daty_3:\n",
+    "    print(True)\n",
+    "else:\n",
+    "    print(False)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Która data jest nowsza?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 370,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1 data jest nowsza.\n"
+     ]
+    }
+   ],
+   "source": [
+    "obiekt_daty_1 = datetime(year=2000, month=12, day=30)\n",
+    "obiekt_daty_2 = datetime(year=2000, month=11, day=30)\n",
+    "\n",
+    "if obiekt_daty_1 > obiekt_daty_2:\n",
+    "    print('1 data jest nowsza.')\n",
+    "else:\n",
+    "    print('2 data jest nowsza.')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Jaka jest różnica między datą A a datą B?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 371,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.timedelta(days=30)"
+      ]
+     },
+     "execution_count": 371,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "roznica_czasu = obiekt_daty_1 - obiekt_daty_2\n",
+    "roznica_czasu"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 7. Działania na czasie\n",
+    "\n",
+    "Obiekt `timedelta` reprezentuje różnicę czasową. Np różnica czasu 2h to:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 292,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from datetime import timedelta\n",
+    "\n",
+    "roznica_czasu = timedelta(hours=2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 297,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.timedelta(seconds=7200)"
+      ]
+     },
+     "execution_count": 297,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "roznica_czasu"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 298,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.timedelta"
+      ]
+     },
+     "execution_count": 298,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "type(roznica_czasu)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Dodaj lub odejmij czas"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 363,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime(2000, 11, 30, 2, 0)"
+      ]
+     },
+     "execution_count": 363,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "obiekt_daty = datetime(year=2000, month=11, day=30)\n",
+    "roznica_czasu = timedelta(hours=2)\n",
+    "\n",
+    "nowa_data = obiekt_daty + roznica_czasu\n",
+    "nowa_data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 364,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Przed:           2000-11-30 00:00:00\n",
+      "Po dodawaniu:    2000-11-30 02:00:00\n",
+      "Po odejmowaniu:  2000-11-30 02:00:00\n"
+     ]
+    }
+   ],
+   "source": [
+    "obiekt_daty = datetime(year=2000, month=11, day=30)\n",
+    "roznica_czasu = timedelta(hours=2)\n",
+    "\n",
+    "print('Przed:          ', obiekt_daty)\n",
+    "\n",
+    "obiekt_daty += roznica_czasu\n",
+    "print('Po dodawaniu:   ', obiekt_daty)\n",
+    "\n",
+    "obiekt_daty +- roznica_czasu\n",
+    "print('Po odejmowaniu: ', obiekt_daty)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Podsumowanie"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# 1. Czas\n",
+    "import time\n",
+    "time.sleep(10) # Zatrzymaj program na 10 sekund\n",
+    "\n",
+    "# 2. Czas teraz\n",
+    "from datetime import datetime\n",
+    "obiekt_daty1 = datetime.now(tz=None) # Czas teraz\n",
+    "\n",
+    "# 3. Inny czas\n",
+    "obiekt_daty2 = datetime(2022, 10, 1, 10, 1) # Inny czas\n",
+    "\n",
+    "# 4. Wybierz informacje z obiektu daty - np. dzień lub rok\n",
+    "rok, miesiac = obiekt_daty.year, obiekt_daty.month\n",
+    "\n",
+    "# 5. Zmień czas \n",
+    "obiekt_daty = obiekt_daty.replace(hour=10)\n",
+    "\n",
+    "# 6. Zamień obiekt daty na tekst\n",
+    "data_obiekt = datetime.today()\n",
+    "data_tekst = data_obiekt.strftime('%Y-%m-%d' )\n",
+    "\n",
+    "# 7. Zamień tekst na obiekt daty\n",
+    "from dateutil import parser\n",
+    "obiekt_daty = parser.parse(\"20-02-1991\")\n",
+    "\n",
+    "# 8. Roznica czasu\n",
+    "roznica_czasu = obiekt_daty1 - obiekt_daty2\n",
+    "roznica_czasu = timedelta(hours=2)\n",
+    "\n",
+    "# 9. Dzialania na czasie\n",
+    "obiekt_daty = obiekt_daty - roznica_czasu\n",
+    "obiekt_daty = obiekt_daty + roznica_czasu\n",
+    "\n",
+    "# 10. Porównuj daty\n",
+    "if obiekt_daty1 == obiekt_daty2:\n",
+    "    pass\n",
+    "\n",
+    "# 11. Ktora data jest nowsza?\n",
+    "if obiekt_daty1 > obiekt_daty2:\n",
+    "    print(1)\n",
+    "else:\n",
+    "    print(2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### X. Jak zapisać datę? \n",
+    "\n",
+    "Wydaje się, że daty wskazujące na ten sam dzień są takie same lub do siebie podobne - przecież każda ma dzień rok czy miesiąc."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### wg. formatu ISO"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 236,
    "metadata": {
     "scrolled": true
    },
@@ -469,10 +1079,33 @@
     {
      "data": {
       "text/plain": [
-       "'2022-04-16T00:49:03.093833'"
+       "datetime.datetime(2022, 4, 16, 2, 4, 26, 354240)"
       ]
      },
-     "execution_count": 219,
+     "execution_count": 236,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "obiekt_daty = datetime.today()\n",
+    "obiekt_daty"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 237,
+   "metadata": {
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'2022-04-16T02:04:26.354240'"
+      ]
+     },
+     "execution_count": 237,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -493,7 +1126,9 @@
   {
    "cell_type": "code",
    "execution_count": 134,
-   "metadata": {},
+   "metadata": {
+    "scrolled": true
+   },
    "outputs": [
     {
      "name": "stdout",
@@ -523,7 +1158,7 @@
     "    'minutes', # data wliczając minuty.\n",
     "    'seconds', # data wliczając sekundy.\n",
     "    'milliseconds', # data wliczając sekundy do \"0.003\" trzech miejsc po przecinku.\n",
-    "    'microseconds' # data wliczając sekundy do \"0.000006\" sześciu miejsc po przecinku.\n",
+    "    'microseconds', # data wliczając sekundy do \"0.000006\" sześciu miejsc po przecinku.\n",
     "]\n",
     "\n",
     "data_obiekt = datetime.today()\n",
@@ -537,15 +1172,97 @@
    ]
   },
   {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### 3. Zamień obiekt daty datetime w tekst nadając mu konkretną formę."
+    "## Level 2"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 1. Przy okazji strefy czasowej"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 221,
+   "execution_count": 304,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pytz"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 303,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "datetime.datetime(2000, 11, 30, 1, 0, tzinfo=datetime.timezone.utc)"
+      ]
+     },
+     "execution_count": 303,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "strefy_czasowe = [\n",
+    "    timedelta(hours=4), # przesunięcie o N godzin\n",
+    "    timezone.utc,       # czas UTC\n",
+    "    None,               # brak wyboru - strefa lokalna dla Twojego komputera, serwera lub miejsca gdzie jest skrypt\n",
+    "]\n",
+    "\n",
+    "\n",
+    "tz=None\n",
+    "\n",
+    "obiekt_daty.astimezone(tz=timezone.utc)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 2. Nadaj dacie formę jaką chcesz"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 337,
    "metadata": {},
    "outputs": [
     {
@@ -554,13 +1271,14 @@
        "'2022-04-16'"
       ]
      },
-     "execution_count": 221,
+     "execution_count": 337,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
     "data_format = '%Y-%m-%d'\n",
+    "\n",
     "data_obiekt = datetime.today()\n",
     "\n",
     "data_obiekt.strftime(date_format)"
@@ -568,16 +1286,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 222,
+   "execution_count": 230,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "'2022-04-16T09:43'"
+       "'2022-04-16T43:52'"
       ]
      },
-     "execution_count": 222,
+     "execution_count": 230,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -590,9 +1308,80 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Ustawianie formatu"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 358,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "%a - Locale’s abbreviated weekday name.\n",
+      "%A - Locale’s full weekday name.\n",
+      "%b - Locale’s abbreviated month name.\n",
+      "%B - Locale’s full month name.\n",
+      "%c - Locale’s appropriate date and time representation.\n",
+      "%d - Day of the month as a decimal number.\n",
+      "%H - Hour (24-hour clock) as a decimal number.\n",
+      "%I - Hour (12-hour clock) as a decimal number.\n",
+      "%j - Day of the year as a decimal number.\n",
+      "%m - Month as a decimal number.\n",
+      "%M - Minute as a decimal number.\n",
+      "%p - Locale’s equivalent of either AM or PM.\n",
+      "%S - Second as a decimal number.\n",
+      "%U - Week number of the year (Sunday as the first day of the week) as a decimal number. All days in a new year preceding the first Sunday are considered to be in week 0. (3)\n",
+      "%w - Weekday as a decimal number\n",
+      "%W - Week number of the year (Monday as the first day of the week) as a decimal number. All days in a new year preceding the first Monday are considered to be in week 0.\n",
+      "%x - Locale’s appropriate date representation.\n",
+      "%X - Locale’s appropriate time representation.\n",
+      "%y - Year without century as a decimal number.\n",
+      "%Y - Year with century as a decimal number.\n",
+      "%Z - Time zone name (no characters if no time zone exists). Deprecated.\n",
+      "%% - A literal '%' character\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = '''\n",
+    "%a - Locale’s abbreviated weekday name.\n",
+    "%A - Locale’s full weekday name.\n",
+    "%b - Locale’s abbreviated month name.\n",
+    "%B - Locale’s full month name.\n",
+    "%c - Locale’s appropriate date and time representation.\n",
+    "%d - Day of the month as a decimal number.\n",
+    "%H - Hour (24-hour clock) as a decimal number.\n",
+    "%I - Hour (12-hour clock) as a decimal number.\n",
+    "%j - Day of the year as a decimal number.\n",
+    "%m - Month as a decimal number.\n",
+    "%M - Minute as a decimal number.\n",
+    "%p - Locale’s equivalent of either AM or PM.\n",
+    "%S - Second as a decimal number.\n",
+    "%U - Week number of the year (Sunday as the first day of the week) as a decimal number. All days in a new year preceding the first Sunday are considered to be in week 0. (3)\n",
+    "%w - Weekday as a decimal number\n",
+    "%W - Week number of the year (Monday as the first day of the week) as a decimal number. All days in a new year preceding the first Monday are considered to be in week 0.\n",
+    "%x - Locale’s appropriate date representation.\n",
+    "%X - Locale’s appropriate time representation.\n",
+    "%y - Year without century as a decimal number.\n",
+    "%Y - Year with century as a decimal number.\n",
+    "%Z - Time zone name (no characters if no time zone exists). Deprecated.\n",
+    "%% - A literal '%' character'''\n",
+    "print(x)"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": 223,
-   "metadata": {},
+   "metadata": {
+    "scrolled": true
+   },
    "outputs": [
     {
      "name": "stdout",
@@ -664,157 +1453,6 @@
    ]
   },
   {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### 4. Zamień tekst z datą w obiekt `datetime`.\n",
-    "\n",
-    "\n",
-    "Format: YYYY-MM-DD[*HH[:MM[:SS[.fff[fff]]]][+HH:MM[:SS[.ffffff]]]]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 224,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "datetime.datetime(2011, 11, 4, 0, 0)"
-      ]
-     },
-     "execution_count": 224,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "from datetime import datetime\n",
-    "\n",
-    "datetime.fromisoformat('2011-11-04')"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 225,
-   "metadata": {
-    "scrolled": false
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Data tekst:     2011-11-04\n",
-      "Data isoformat: 2011-11-04 00:00:00\n",
-      "\n",
-      "Data tekst:     2011-11-04T00:05:23\n",
-      "Data isoformat: 2011-11-04 00:05:23\n",
-      "\n",
-      "Data tekst:     2011-11-04 00:05:23.283\n",
-      "Data isoformat: 2011-11-04 00:05:23.283000\n",
-      "\n",
-      "Data tekst:     2011-11-04 00:05:23.283+00:00\n",
-      "Data isoformat: 2011-11-04 00:05:23.283000+00:00\n",
-      "\n",
-      "Data tekst:     2011-11-04T00:05:23+04:00\n",
-      "Data isoformat: 2011-11-04 00:05:23+04:00\n",
-      "\n"
-     ]
-    }
-   ],
-   "source": [
-    "daty_w_tekscie = [\n",
-    "    '2011-11-04',\n",
-    "    '2011-11-04T00:05:23',\n",
-    "    '2011-11-04 00:05:23.283',\n",
-    "    '2011-11-04 00:05:23.283+00:00',\n",
-    "    '2011-11-04T00:05:23+04:00',\n",
-    "]\n",
-    "\n",
-    "for d in daty_w_tekscie:\n",
-    "    print('Data tekst:    ', d)\n",
-    "    print('Data isoformat:', datetime.fromisoformat(d))\n",
-    "    print('')"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 171,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "datetime.datetime(2011, 11, 4, 0, 0)"
-      ]
-     },
-     "execution_count": 171,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "date_string = '2011-11-04'\n",
-    "date_format = '%Y-%m-%d'\n",
-    "\n",
-    "datetime.strptime(date_string, date_format)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 172,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "datetime.datetime(2011, 11, 4, 0, 0)"
-      ]
-     },
-     "execution_count": 172,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "datetime.strptime('2011-11-04', '%Y-%m-%d')"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 173,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "datetime.datetime(2011, 11, 4, 0, 0)"
-      ]
-     },
-     "execution_count": 173,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "datetime.strptime('2011-11-04', '%Y-%m-%d')"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": []
-  },
-  {
    "cell_type": "code",
    "execution_count": null,
    "metadata": {},
@@ -825,238 +1463,48 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### 4. Porównuj daty"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 149,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Czy data A jest taka jak data B? #"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 150,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "obiekt_daty_1 = datetime(year=2000, month=12, day=30)\n",
-    "obiekt_daty_2 = datetime(year=2000, month=12, day=30)\n",
+    "#### Daty: najważniejsze problemy i rozwiązania\n",
     "\n",
-    "obiekt_daty_3 = datetime(year=1000, month=10, day=10)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 151,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "True\n"
-     ]
-    }
-   ],
-   "source": [
-    "if obiekt_daty_1 == obiekt_daty_2:\n",
-    "    print(True)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 152,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "False\n"
-     ]
-    }
-   ],
-   "source": [
-    "if obiekt_daty_1 == obiekt_daty_3:\n",
-    "    print(True)\n",
-    "else:\n",
-    "    print(False)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Czy data A czy data B jest nowsza i o ile?"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Jaka jest różnica między datą A a datą B?"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 164,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "datetime.timedelta(seconds=7200)"
-      ]
-     },
-     "execution_count": 164,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "timedelta(hours=2)"
+    "dla uproszczenia do pracy z datą użyjemy 2 obiektów `timedelta` który zajmuje się różnicami czasu i `datetime` który zawiera pełną informację o czasie i składają się na niego 3 elementy którymi zajmują się 3 obiekty:\n",
+    "1. kalendarzowe - dzień, miesiąc, rok a którymi szczególnie zajmuje się obiekt `datetime.date`, \n",
+    "2. jaki informacje o godzinie, minucie, sekundzie - bliskie obiektowi `datetime.time`,\n",
+    "3. oraz o strefie czasowej - omawiane przy okazji obiektu `datetime.timezone`."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### 5. Działania na czasie"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "# Dodaj lub odejmij czas"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "timedelta(hours=2)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "from datetime import timedelta\n",
-    "d = timedelta(microseconds=-1)\n",
-    "date2 = date1 + timedelta\n",
-    "date2 = date1 - timedelta\n",
-    "t1 = t2 + t3\n",
-    "t1 = t2 * i or t1 = i * t2\n",
-    "t1 = t2 - t3"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# X"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 96,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import time"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### 1. Zatrzymaj działanie programu na N sekund - `time.sleep(N)`\n",
-    "\n",
-    "Odpal poniższą komórkę. Po każdej iteracji program wstrzyma się na 2 sekundy. Ta metoda przydaje się np. gdy łączymy się z innymi serwerami, albo chcemy aby ktoś odczekał zanim ponownie wykona akcję (np. logowania czy wysłania wiadomości)."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 3,
-   "metadata": {
-    "scrolled": false
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "0\n",
-      "1\n",
-      "2\n",
-      "3\n",
-      "4\n",
-      "5\n",
-      "6\n",
-      "7\n"
-     ]
-    }
-   ],
-   "source": [
-    "for i in range(8):\n",
-    "    print(i)\n",
-    "    time.sleep(2)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### 2. Sprawdź dokładnie aktualny czas - np. `time.time()`\n",
+    "### 3. Sprawdź dokładnie aktualny czas - np. `time.time()`\n",
     "\n",
     "Czas jako liczba sekund - `time.time() ` lub nanosekund - `time.time_ns() `"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 74,
+   "execution_count": 323,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "1649952430.0242095"
+       "1650107655.2526367"
       ]
      },
-     "execution_count": 74,
+     "execution_count": 323,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
+    "import time \n",
+    "\n",
     "time.time() # czas teraz w sekundach "
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 77,
+   "execution_count": 307,
    "metadata": {
     "scrolled": true
    },
@@ -1064,10 +1512,10 @@
     {
      "data": {
       "text/plain": [
-       "1649952483517560512"
+       "1650107486858259892"
       ]
      },
-     "execution_count": 77,
+     "execution_count": 307,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1077,10 +1525,49 @@
    ]
   },
   {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from datetime import datetime\n",
+    "\n",
+    "tz = None\n",
+    "liczbowa_reprezentacja_czasu = 13342444434\n",
+    "datetime.fromtimestamp(liczbowa_reprezentacja_czasu, tz=tz)\n",
+    "\n",
+    "from datetime import datetime\n",
+    "\n",
+    "liczbowa_reprezentacja_czasu = 13342444434\n",
+    "datetime.utcfromtimestamp(liczbowa_reprezentacja_czasu)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### 3. Szybko stwórz datę jako tekst - `time.asctime()` lub obiekt ale time a nie datetime - `time.gmtime()`, `time.localtime()`"
+    "### 4. Szybko stwórz datę jako tekst - `time.asctime()` lub obiekt ale time a nie datetime - `time.gmtime()`, `time.localtime()`"
    ]
   },
   {
@@ -1285,37 +1772,16 @@
    "source": []
   },
   {
-   "cell_type": "code",
-   "execution_count": null,
+   "cell_type": "markdown",
    "metadata": {},
-   "outputs": [],
    "source": [
-    "data_obiekt # PL 1\n",
-    "obiekt_daty # PL 1\n",
-    "obiekt_data # PL 2\n",
-    "\n",
-    "date_object # EN "
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "data_format # PL 1\n",
-    "format_daty # PL 2\n",
-    "format_data # PL 3\n",
-    "\n",
-    "date_format # EN "
+    "#### 5. Zamień obiekt czasu w stringa z datą sformatowaną tak jak chcesz."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
-   "source": [
-    "### pytz"
-   ]
+   "source": []
   },
   {
    "cell_type": "code",
@@ -1329,9 +1795,7 @@
    "execution_count": null,
    "metadata": {},
    "outputs": [],
-   "source": [
-    "import pytz"
-   ]
+   "source": []
   },
   {
    "cell_type": "code",
@@ -1348,465 +1812,6 @@
    "source": [
     "33333333333333333333333"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "#### Zamiana liczbowej reprezentacji czasu w obiekt datetime\n",
-    "\n",
-    "from datetime import datetime\n",
-    "\n",
-    "tz = None\n",
-    "liczbowa_reprezentacja_czasu = 13342444434\n",
-    "datetime.fromtimestamp(liczbowa_reprezentacja_czasu, tz=tz)\n",
-    "\n",
-    "from datetime import datetime\n",
-    "\n",
-    "liczbowa_reprezentacja_czasu = 13342444434\n",
-    "datetime.utcfromtimestamp(liczbowa_reprezentacja_czasu)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 163,
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "from datetime import time, timezone, timedelta\n",
-    "d = date(2005, 7, 14)\n",
-    "t = time(12, 30)\n",
-    "datetime.combine(d, t)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### 5. Zamień obiekt czasu w stringa z datą sformatowaną tak jak chcesz."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "%a - Locale’s abbreviated weekday name.\n",
-    "%A - Locale’s full weekday name.\n",
-    "%b - Locale’s abbreviated month name.\n",
-    "%B - Locale’s full month name.\n",
-    "%c - Locale’s appropriate date and time representation.\n",
-    "%d - Day of the month as a decimal number.\n",
-    "%H - Hour (24-hour clock) as a decimal number.\n",
-    "%I - Hour (12-hour clock) as a decimal number.\n",
-    "%j - Day of the year as a decimal number.\n",
-    "%m - Month as a decimal number.\n",
-    "%M - Minute as a decimal number.\n",
-    "%p - Locale’s equivalent of either AM or PM.\n",
-    "%S - Second as a decimal number.\n",
-    "%U - Week number of the year (Sunday as the first day of the week) as a decimal number. All days in a new year preceding the first Sunday are considered to be in week 0. (3)\n",
-    "%w - Weekday as a decimal number\n",
-    "%W - Week number of the year (Monday as the first day of the week) as a decimal number. All days in a new year preceding the first Monday are considered to be in week 0.\n",
-    "%x - Locale’s appropriate date representation.\n",
-    "%X - Locale’s appropriate time representation.\n",
-    "%y - Year without century as a decimal number.\n",
-    "%Y - Year with century as a decimal number.\n",
-    "%Z - Time zone name (no characters if no time zone exists). Deprecated.\n",
-    "%% - A literal '%' character"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 195,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 196,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   },
   {
    "cell_type": "code",
@@ -1902,6 +1907,60 @@
    "metadata": {},
    "outputs": [],
    "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data_obiekt # PL 1\n",
+    "obiekt_daty # PL 1\n",
+    "obiekt_data # PL 2\n",
+    "\n",
+    "date_object # EN "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "data_format # PL 1\n",
+    "format_daty # PL 2\n",
+    "format_data # PL 3\n",
+    "\n",
+    "date_format # EN "
+   ]
   }
  ],
  "metadata": {
