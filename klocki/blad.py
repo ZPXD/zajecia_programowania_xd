@@ -1,2 +1,6 @@
-if x:
-    print('x zostało zdedfiniowane')
+
+a = int(input("liczba"))
+if a > 3:
+    print("fsrdefretryjtjryjdvdfbbrhrjhtjrjgergr")
+
+
