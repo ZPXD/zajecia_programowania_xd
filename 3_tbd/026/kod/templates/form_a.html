@@ -2,7 +2,6 @@
 
 {% block content %}
 
-
     <div>  
         <br>
         <br>
@@ -12,16 +11,16 @@
         <br>
         <form style="text-align:center" action="" method="post">
         
-            {{form.csrf_token() }}
+            {{ form.csrf_token() }}
                 
-            <p><b>x</b></p>
-            <p>{{form.x}}</p>
+            <p><b>{{ form.github.label }}</b></p>
+            <p>{{ form.github}}</p>
                 
-            <p><b>y</b></p>
-            <p>{{form.y}}</p>
+            <p><b>{{form.my_github_state.label}}</b></p>
+            <p>{{form.my_github_state}}</p>
                 
-            <p><b>z</b></p>
-            <p>{{form.z}}</p>
+            <p><b>{{form.follow_me.label}}</b></p>
+            <p>{{form.follow_me}}</p>
                 
             <p>{{form.button}}</p>
 
