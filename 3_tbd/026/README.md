@@ -1,11 +1,9 @@
-## Zajęcia Programowania xD #026
-0
-Pierwsze spotkanie nowej przygody. Rozwijamy flagę. Flask.
-1
+1 ## Zajęcia Programowania xD #026
 2
-3
+3 Pierwsze spotkanie nowej przygody. Rozwijamy flagę. Flask.
 4
 5
 6
-Test test test
+7
+8
 
