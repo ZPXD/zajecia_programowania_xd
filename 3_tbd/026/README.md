@@ -1,5 +1,5 @@
 ## Zajęcia Programowania xD #026
-
+0
 Pierwsze spotkanie nowej przygody. Rozwijamy flagę. Flask.
 1
 2
