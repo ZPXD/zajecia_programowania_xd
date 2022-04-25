@@ -1,3 +1,3 @@
 ## Notatki
 
-Opis
+TBD.
