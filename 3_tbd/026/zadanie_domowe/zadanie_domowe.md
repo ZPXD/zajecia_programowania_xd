@@ -15,3 +15,4 @@ Po zmianie treści strony - wykonaj:
 sudo systemctl restart nginx
 sudo systemctl restart flaga.service
 ```
+Czyli to co wykonuje skrytp /var/www/flaga/pomocnicze_skrypty/reload.py .
