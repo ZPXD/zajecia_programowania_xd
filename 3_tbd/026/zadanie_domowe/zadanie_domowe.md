@@ -8,7 +8,7 @@ Termin: na środę (27.04.2022) - (ale to zadanie nie musi wyść w 100% - jak c
 
 **Treść zadania domowego**:
 
-1. Skopiuj folder 'kod' do folderu "zadanie_domowe" i nazwij go swoim nickiem na discordzie lub githubie np zadanie_domowe/lukasz/*
+1. Skopiuj folder 'kod' do folderu "zadanie_domowe/zadania" i nazwij go swoim nickiem na discordzie lub githubie np zadanie_domowe/zadania/rozwiazanie_lukaszp/.."
 2. Dodaj do niego kod zadania domowego - czyli treść 2 formularza w pliku app.py i w pliku templates/form_b.html
 3. Dodaj kod repozytorium:
   a. fork repozytorium
