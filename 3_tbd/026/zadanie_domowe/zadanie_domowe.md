@@ -12,7 +12,9 @@ Termin: na środę (27.04.2022) - (ale to zadanie nie musi wyść w 100% - jak c
 2. Dodaj do niego kod zadania domowego - czyli treść 2 formularza w pliku app.py i w pliku templates/form_b.html
 3. Dodaj kod repozytorium:
   a. fork repozytorium
+  
   b. dołóż swój folder z rozwiązaniem (utworzony w kroku 1)
+  
   c. zrób PR (pull requesta) :)
 
 Jak coś nie wyjdzie to na spokojnie, pierwsze koty za płoty :)
