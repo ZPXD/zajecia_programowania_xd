@@ -13,7 +13,7 @@ Termin: na środę (27.04.2022) - (ale to zadanie nie musi wyść w 100% - jak c
 3. Wedjdź w folder i zrób zadanie. Zapisz.
 4. Zrób Pull Requesta (PR)
 
-**Uwaga - ważne!**
+## Uwaga - ważne!
 
 Po wykonaniu ćwiczenia i sprawdzeniu kodu czy i jak działa - wyhaszuj kod - przyda się na potem. Wróć do niego jak będziesz chciał/chciała znów poćwiczyć, a następnie znów go zahaszuj. 
 
