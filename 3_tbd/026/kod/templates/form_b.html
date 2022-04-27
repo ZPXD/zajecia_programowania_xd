@@ -2,14 +2,85 @@
 
 {% block content %}
 
-    <br>
-    <br>
-    <br>
-    <h1 style="text-align:center">form b</h1>
-    <br>
-    <br>
-    <p style="text-align:center"> Miejsce na Twój szablon ...</p>
-    <br>
-    <br>
+<head>
+    <title>
+      Bulma Navbar start and Navbar end
+    </title>
+    <link rel='stylesheet' href=
+  'https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'>
+    <style>
+      .navbar {
+        margin-top: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+    
+  <body class="has-text-centered has-navbar-fixed-bottom">
+   <h1 class="is-size-2 has-text-success">
+     GeeksforGeeks
+   </h1>
+    
+   <b>
+      Bulma Navbar start
+      and Navbar end
+   </b>
+    
+   <div class="container">
+     <nav class="navbar is-transparent">
+      <div class="navbar-barand">
+        <a class="navbar-item" href="https://geeksforgeeks.org">
+          <img src=
+  "https://media.geeksforgeeks.org/wp-content/uploads/20220121204016/gfglogo300x152-200x101.png">
+        </a>
+    
+        <div class="navbar-burger" data-target="nav1">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    
+      <div id="nav1" class="navbar-menu">
+         <div class="navbar-start has-background-primary">
+          <a class="navbar-item" href="#">
+              Home
+          </a>
+    
+          <a class="navbar-item" href="#">
+              Practice
+          </a>
+         </div>
+    
+        <div class="navbar-end has-background-link">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <button class="button is-info">
+                    Algorithms
+                </button>
+              </p>
+    
+              <p class="control">
+                <button class="button is-info is-outlined">
+                    Data Structures
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+        
+    <p class="mt-6">
+      <b>Here the 
+       <i>navbar-start</i> 
+        has primary color background and the 
+       <i>navbar-end</i> 
+        has link color background
+      </b>
+    </p>
+   </div>
+  </body>
 
 {% endblock %}
