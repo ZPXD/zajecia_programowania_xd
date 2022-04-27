@@ -6,18 +6,13 @@ Po wykonaniu zadnia - postaraj się dodać je do repozytorium ZPXD w folderze za
 
 Termin: na środę (27.04.2022) - (ale to zadanie nie musi wyść w 100% - jak coś nie wyjdzie to jest wszystko ok - będziemy rozwijać ten temat w środę 27.04.2022).
 
-**Treść zadania domowego**:
+## Tu wrzucajcie wasze odpowiedzi na zadania 
 
-1. Skopiuj folder 'kod' do folderu "zadanie_domowe/zadania" i nazwij go swoim nickiem na discordzie lub githubie np zadanie_domowe/zadania/rozwiazanie_lukaszp/.."
-2. Dodaj do niego kod zadania domowego - czyli treść 2 formularza w pliku app.py i w pliku templates/form_b.html
-3. Dodaj kod repozytorium:
-  a. fork repozytorium
-  
-  b. dołóż swój folder z rozwiązaniem (utworzony w kroku 1)
-  
-  c. zrób PR (pull requesta) :)
-
-Jak coś nie wyjdzie to na spokojnie, pierwsze koty za płoty :)
+1. Pobierz "zklonuj" to repozytorium
+2. Zmień nazwę folderu "/zadanie_domowe/zadania/przyklad_zmien_nazwe" na nazwę jaką masz na githubie lub discordzie
+3. Wedjdź w folder i zrób zadanie. Zapisz.
+4. Zrób Pull Requesta (PR)
+5. 
 
 **Uwaga - ważne!**
 
