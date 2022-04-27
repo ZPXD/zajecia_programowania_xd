@@ -1,4 +1,4 @@
-## Pobierz repozytorium z githuba - `git clone repo`
+## Pobierz repozytorium - git clone
 
 **W terminalu:**
 
