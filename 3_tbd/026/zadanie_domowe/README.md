@@ -8,10 +8,11 @@ Termin: na środę (27.04.2022) - (ale to zadanie nie musi wyść w 100% - jak c
 
 ### Tu wrzucajcie wasze odpowiedzi na zadania 
 
-1. Pobierz "zklonuj" to repozytorium
-2. Zmień nazwę folderu "/zadanie_domowe/zadania/przyklad_zmien_nazwe" na nazwę jaką masz na githubie lub discordzie
-3. Wedjdź w folder i zrób zadanie. Zapisz.
-4. Zrób Pull Requesta (PR)
+1. Pobierz to repozytorium (git clone)
+2. Znajdź szablon w pobranym repozytorium - jest w "ZPXD/zajecia_programowania_xd/3_tbd/026/zadanie_domowe/zadania/000_SZABLON_ZADANIA_zmien_nazwe"
+3. Skopiuj go i zmień nazwę folderu "/zadanie_domowe/zadania/000_SZABLON_ZADANIA_zmien_nazwe" na nazwę jaką masz na githubie lub discordzie
+4. Wedjdź w folder i zrób zadanie. Zapisz.
+5. Zrób Pull Requesta (PR)
 
 ### Uwaga - ważne!
 
