@@ -8,7 +8,7 @@
 
 #### 1. Pobierz repozytorium
 
-W terminalu:
+W terminalu wejdź do folderu w którym chcesz pobrać repozytorium i wypisz:
 ```
 git clone https://github.com/ZPXD/zajecia_programowania_xd.git
 ```
