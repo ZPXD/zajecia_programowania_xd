@@ -2,8 +2,13 @@
 
 **W terminalu:**
 
+Otwórz terminal i pobierz tam gdzie jesteś:
 ```
 git clone https://github.com/ZPXD/zajecia_programowania_xd.git
+```
+Albo do wybranego folderu:
+```
+git clone https://github.com/ZPXD/zajecia_programowania_xd.git nazwa_folderu
 ```
 
 **W VSCode:**
