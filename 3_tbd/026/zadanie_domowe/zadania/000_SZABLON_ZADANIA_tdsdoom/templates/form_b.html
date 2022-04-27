@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>  
+        <br>
+        <br>
+        <br>
+        <h1 style="text-align:center">form a</h1>
+        <br>
+        <br>
+        <form style="text-align:center" action="" method="post">
+        
+            {{ form.csrf_token() }}
+                
+            <p><b>{{ form.youtube.label }}</b></p>
+            <p>{{ form.youtube}}</p>
+                
+            <p>{{form.button}}</p>
+
+        </form>
+    </div>
+
+{% endblock %}
