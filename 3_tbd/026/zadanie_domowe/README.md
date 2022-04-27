@@ -6,14 +6,14 @@ Po wykonaniu zadnia - postaraj się dodać je do repozytorium ZPXD w folderze za
 
 Termin: na środę (27.04.2022) - (ale to zadanie nie musi wyść w 100% - jak coś nie wyjdzie to jest wszystko ok - będziemy rozwijać ten temat w środę 27.04.2022).
 
-## Tu wrzucajcie wasze odpowiedzi na zadania 
+### Tu wrzucajcie wasze odpowiedzi na zadania 
 
 1. Pobierz "zklonuj" to repozytorium
 2. Zmień nazwę folderu "/zadanie_domowe/zadania/przyklad_zmien_nazwe" na nazwę jaką masz na githubie lub discordzie
 3. Wedjdź w folder i zrób zadanie. Zapisz.
 4. Zrób Pull Requesta (PR)
 
-## Uwaga - ważne!
+### Uwaga - ważne!
 
 Po wykonaniu ćwiczenia i sprawdzeniu kodu czy i jak działa - wyhaszuj kod - przyda się na potem. Wróć do niego jak będziesz chciał/chciała znów poćwiczyć, a następnie znów go zahaszuj. 
 
