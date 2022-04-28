@@ -17,15 +17,29 @@ W VSCode wedle instrukcji: https://github.com/ZPXD/zajecia_programowania_xd/blob
 
 #### 2. Szablon zadania domowego.
 
-W terminalu wejdź do folderu z zadaniem domowym
+W terminalu wejdź do folderu z zadaniem domowym:
 ```
 cd zajecia_programowania_xd/3_tbd/026
 cd zadanie_domowe/zadania
 ```
-skopiuj szablon odpowiedzi i zapisz go pod swoją nazwą z githuba lub discorda
+
+Skopiuj szablon odpowiedzi i zapisz go pod swoją nazwą z githuba lub discorda:
 ```
 cp -r 000_SZABLON_ZADANIA_zmien_nazwe imie_github_zadanie_domowe
 ```
+
+1. Otwórz VSCode
+![Screenshot](foto/11.png)
+
+2. Otwórz pobrane repozytorium w nowym oknie
+![Screenshot](foto/12.png)
+
+3. Znajdź folder zajęć (np. 3_tbd/026 ) a w nim folder zadanie_domowe/zadania a tam folder z szablonem 
+![Screenshot](foto/13.png)
+
+4. Stwórz kopię pliku czy folderu z szablonem i zapisz pod swoją nazwą na github/discord
+![Screenshot](foto/15.png)
+
 
 #### 3. Zrób zadanie domowe.
 
@@ -37,5 +51,15 @@ cd imie_github_zadanie_domowe
 code app.py # jeżeli używasz VSCode, albo subl app.py jeżeli używasz Sublime 
 ```
 
+W VSCode - powinieneś być we właściwym miejscu po ukończeniu poprzedniego kroku. Edytuj kod i zapisz jak skończysz.
 
 #### 4. Zrób Pull Requesta (PR).
+
+W VSCode:
+
+1. Jeżeli jeszcze nie masz, [Pobierz VSCode Pull Requests](https://github.com/ZPXD/zajecia_programowania_xd/blob/main/przydatne/pobierz_github_pull_requests.md)
+
+2. Zadanie zapisane? Zrób PR:
+
+
+
