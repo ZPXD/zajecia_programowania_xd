@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<h1 style="text-align:center">Forma b</h1>
+<br>
+<br>
+<form style="text-align:center" action="" method="post">
+
+    {{ form.csrf_token() }}
+
+    <p><b>{{ form.nick.label }}</b></p>
+    <p>{{ form.nick}}</p>
+
+    <p><b>{{form.gender.label}}</b></p>
+    <p>{{form.gender}}</p>
+
+    <p><b>{{form.age_18.label}}</b></p>
+    <p>{{form.age_18}}</p>
+
+    <p><b>{{form.movie.label}}</b></p>
+    <p>{{form.movie}}</p>
+
+    <p>{{form.button}}</p>
+
+</form>
+</div>
+
+{% endblock %}
