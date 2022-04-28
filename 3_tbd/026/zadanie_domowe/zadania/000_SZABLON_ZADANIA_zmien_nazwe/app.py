@@ -67,7 +67,6 @@ def save_data(string):
 
 
 
-
 # Errors
 
 @app.errorhandler(404)
