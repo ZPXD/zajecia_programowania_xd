@@ -18,8 +18,6 @@ def index():
     return render_template("index.html")
 
 
-
-
 # Forms
 
 @app.route('/form_a', methods=["GET", "POST"])
@@ -39,9 +37,22 @@ def form_a():
 
     return render_template("form_a.html", form=form)
 
-@app.route('/form_b')
+
+@app.route('/form_b', methods=["GET", "POST"])
 def form_b():
-    return render_template("form_b.html")
+
+    formB = B()
+    if formB.validate_on_submit():
+        
+        music_URL = formB.music_URL.data
+        follow = formB.follow.data
+
+        string = '{}\n{}\n\n'.format(music_URL, follow)
+        save_data(string)
+
+        return redirect( url_for('form_result'))
+
+    return render_template("form_b.html", formB=formB)
 
 @app.route('/form_result')
 def form_result():
@@ -53,6 +64,8 @@ def form_result():
 def save_data(string):
     with open('data/data.txt', "a") as f:
         f.write(string)
+
+
 
 
 # Errors
@@ -82,7 +95,11 @@ class X(FlaskForm):
 
     button = SubmitField('kk')
 
+class B(FlaskForm):
+    music_URL = StringField('Podaj link do dobrej muzy :)', validators=[DataRequired()])
+    follow = BooleanField('Followuj mnie na gitubie :)')
 
+    button_next = SubmitField('Next')
 
 
 if __name__=="__main__":
