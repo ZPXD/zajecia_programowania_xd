@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center">Formularz 'b'</h1>
+    <br>
+    <br>
+    <form style="text-align:center" action="" method="post">
+
+        {{ formB.csrf_token() }}
+
+        <p><b>{{ formB.music_URL.label }}</b></p>
+        <p>{{ formB.music_URL}}</p>
+
+        <p><b>{{formB.follow.label}}</b></p>
+        <p>{{formB.follow}}</p>
+
+        <p>{{formB.button_next}}</p>
+
+
+    </form>
+</div>
+
+{% endblock %}
