@@ -41,9 +41,9 @@ cp -r 000_SZABLON_ZADANIA_zmien_nazwe imie_github_zadanie_domowe
 ![Screenshot](foto/15.png)
 
 
-#### 3. Zrób zadanie domowe.
+#### 3. Zadanie domowe.
 
-Wedjdź w utworzony folder z Twoim zadaniem i zrealizuj zadanie zgodnie z jego treścią opisaną w folderze zajęć jako `zadanie_domowe/README.md`. Jak ukończysz zadanie, zapisz plik.
+Wejdź w utworzony folder z Twoim zadaniem i zrealizuj zadanie zgodnie z jego treścią opisaną w folderze zajęć jako `zadanie_domowe/README.md`. Jak ukończysz zadanie, zapisz plik.
 
 W terminalu:
 ```
