@@ -25,9 +25,7 @@ app.config['UPLOAD_FOLDER'] = 'static'
 
 @app.route('/', methods=["GET", "POST"])
 def index():
-	test()
-
-
+	create_folders()
 
 	# Flag.
 	xd = random.choice(range(22))
@@ -91,10 +89,10 @@ def gather_heroes():
 
 			# Save all.
 			with open('saved_heroes/'+hero+".hero", "w+") as f:
-			 	f.write(hero + '\n')
-			 	f.write(str(n_photos) + '\n')
-			 	f.write(info_intro + '\n')
-			 	f.write(url)
+				f.write(hero + '\n')
+				f.write(str(n_photos) + '\n')
+				f.write(info_intro + '\n')
+				f.write(url)
 
 		else:
 			greeting = random.choice(greetings)
@@ -118,15 +116,10 @@ def gather_heroes():
 
 def save_image(image_url, image_name):
 	image = requests.get(image_url).content
-	save_as = 'hero_image/{}'.format(image_name)
+	save_as = 'static/hero_image/{}'.format(image_name)
 	with open(save_as, 'wb') as ap:
-	    ap.write(image)
+		ap.write(image)
 	return save_as
-
-
-def test():
-	for f in os.listdir('saved_heroes'):
-		os.system('rm saved_heroes/{}'.format(f))
 
 def bold(hero_info):
 
@@ -177,7 +170,6 @@ def hero_think(name):
 				quote = tree.text_content().strip()
 				if not quote.startswith('Opis') and not quote.startswith('Autor') and not quote.startswith('Źródło'):
 					f.write(quote + '\n')
-
 
 def create_folders():
 	os.system("mkdir static/hero_image")
