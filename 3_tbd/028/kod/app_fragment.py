@@ -23,8 +23,8 @@ app.config['UPLOAD_FOLDER'] = 'static'
 
 # Route
 
-@app.route('/', methods=["GET", "POST"])
-def index():
+@app.route('/flaga', methods=["GET", "POST"])
+def flaga():
 	create_folders()
 
 	# Flag.
