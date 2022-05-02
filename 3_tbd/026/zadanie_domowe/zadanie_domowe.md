@@ -1,3 +1,0 @@
-## Zadanie domowe
-
-Zadanie.
