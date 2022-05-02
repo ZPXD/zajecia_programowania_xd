@@ -1,3 +1,3 @@
 ## Zajęcia Programowania xD #028
 
-Flask: błędy, formularze, baza danych. Rozwijamy flagę.
+Flask: formularze, baza danych, ogarnianie błędów. Rozwijamy flagę.
