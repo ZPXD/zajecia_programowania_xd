@@ -1,0 +1,83 @@
+----------------------------------------------------------------------------------------------------------------------------
+PLIK PY
+----------------------------------------------------------------------------------------------------------------------------
+@app.route('/form_a', methods=["GET", "POST"])
+def form_a():
+
+    form = X()
+    if form.validate_on_submit():
+        
+        github = form.github.data
+        my_github_state = form.my_github_state.data
+        follow_me = form.follow_me.data
+
+        string = '{}\n{}\n{}\n\n'.format(github, my_github_state, follow_me)
+        save_data(string)
+
+        return redirect( url_for('form_result'))
+
+    return render_template("form_a.html", form=form)
+
+@app.route('/form_b', methods = ['GET', 'POST'])
+def form_b():
+    form = Y()
+    if form.validate_on_submit():
+        fav_music = form.fav_music.data
+        string = '{}\n\n'.format(fav_music)
+        save_data(string)
+        return redirect( url_for('form_result'))
+    return render_template("form_b.html", form=form)
+
+@app.route('/form_result')
+def form_result():
+    return render_template("form_result.html")
+
+# Helpers
+
+def save_data(string):
+    with open('data/data.txt', "a") as f:
+        f.write(string)
+
+# Form
+
+class X(FlaskForm):
+    x_options = [
+            ('a','a'),
+            ('a','b'),
+            ('c','c'),
+            ('d','d'),
+    ]
+
+    github = StringField('Twój github:', validators=[DataRequired()])
+    my_github_state = SelectField('Ogarniam githuba na:', choices=x_options)
+    follow_me = BooleanField('Followuj mnie na gitubie :)')
+
+    button = SubmitField('kk')
+
+class Y(FlaskForm):
+    fav_music = StringField('Twoja ulubiona muzyka: ', validators=[DataRequired()])
+    button = SubmitField('Send')
+----------------------------------------------------------------------------------------------------------------------------
+PLIK HTML
+----------------------------------------------------------------------------------------------------------------------------
+{% block content %}
+<div>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center">form b</h1>
+    <br>
+    <br>
+    <form style="text-align:center" action="" method="post">
+        
+        {{ form.csrf_token() }}
+            
+        <p><b>{{ form.fav_music.label }}</b></p>
+        <p>{{ form.fav_music}}</p>  
+        <p>{{form.button}}</p>
+
+    </form>
+    <br>
+    <br>
+</div>
+{% endblock %}
