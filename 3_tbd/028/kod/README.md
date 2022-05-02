@@ -1,4 +1,4 @@
-## Uruchom.
+## Uruchom
 
 Doinstaluj brakujące biblioteki (wiesz jak) i
 
