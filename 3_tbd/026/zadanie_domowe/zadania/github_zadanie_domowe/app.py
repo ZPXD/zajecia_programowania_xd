@@ -18,6 +18,8 @@ def index():
     return render_template("index.html")
 
 
+
+
 # Forms
 
 @app.route('/form_a', methods=["GET", "POST"])
@@ -79,6 +81,8 @@ class X(FlaskForm):
     follow_me = BooleanField('Followuj mnie na gitubie :)')
 
     button = SubmitField('kk')
+
+
 
 
 if __name__=="__main__":
