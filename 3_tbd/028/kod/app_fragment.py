@@ -53,6 +53,7 @@ def gather_heroes():
 		'Kościuszko',
 		'Jan Henryk Dąbrowski',
 		'Wojciech Korfanty',
+		'Adam Mickiewicz',
 
 	]
 
