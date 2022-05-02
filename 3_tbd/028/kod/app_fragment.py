@@ -42,16 +42,16 @@ def index():
 def gather_heroes():
 	
 	heroes = [
-		'Mikołaj Kopernik',
-		'Józef Haller',
-		'Władysław Sikorski',
-		'Rotmistrz Pilecki',
-		'Maria Skłodowska',
-		'Chopin',
-		'Kościuszko',
-		'Jan Henryk Dąbrowski',
-		'Wojciech Korfanty',
-		'Adam Mickiewicz',
+ 		'Mikołaj Kopernik',
+# 		'Józef Haller',
+# 		'Władysław Sikorski',
+# 		'Rotmistrz Pilecki',
+# 		'Maria Skłodowska',
+# 		'Chopin',
+# 		'Kościuszko',
+# 		'Jan Henryk Dąbrowski',
+# 		'Wojciech Korfanty',
+# 		'Adam Mickiewicz',
 
 	]
 
