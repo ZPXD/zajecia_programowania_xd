@@ -3,8 +3,8 @@ from flask import Flask, render_template, redirect, url_for, request
 import flask_wtf
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, BooleanField, SubmitField
-from wtforms.validators import DataRequired
-
+from wtforms.validators import DataRequired, URL
+import validators
 
 app = Flask(__name__)
 
@@ -49,16 +49,20 @@ def form_b():
     form_zad_dom = FormZD()
     form_input_url = ''
     form_checkbox = ''
+    url_not_valid = ''
     if request.method == "POST":
         form_input_url = form_zad_dom.form_input_url.data
-        form_checkbox =  form_zad_dom.form_checkbox.data
-        if form_checkbox:
-            string_save_in_file = '{}\n{}\n\n'.format(form_input_url,form_checkbox)
-            save_data(string_save_in_file)
+        if validators.url(form_input_url):
+            form_checkbox =  form_zad_dom.form_checkbox.data
+            if form_checkbox:
+                string_save_in_file = '{}\n{}\n\n'.format(form_input_url,form_checkbox)
+                save_data(string_save_in_file)
 
-        return redirect( url_for('form_result_fuction',form_checkbox=form_checkbox))
+            return redirect( url_for('form_result_fuction',form_checkbox=form_checkbox))
+        else:
+            url_not_valid = 1
     
-    return render_template("form_b.html", form_zad_dom=form_zad_dom)
+    return render_template("form_b.html", form_zad_dom=form_zad_dom, url_not_valid=url_not_valid)
 
 @app.route('/form_result_fuction', methods=["GET", "POST"])
 def form_result_fuction():
@@ -102,7 +106,7 @@ class X(FlaskForm):
     button = SubmitField('kk')
 
 class FormZD(FlaskForm):
-    form_input_url = StringField('Wpisz ciekawy adres url', validators=[DataRequired()])
+    form_input_url = StringField('Wpisz ciekawy adres url', validators=[DataRequired(), URL(message='Nieprawidłowy adres url')])
     form_checkbox = BooleanField('Zapisz link w pliku')
 
     form_submit = SubmitField('Wykonaj')

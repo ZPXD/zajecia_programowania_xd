@@ -3,4 +3,3 @@ True
 
 https://adres-kolejny.url
 True
-
