@@ -11,16 +11,6 @@ app=Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'static'
 
 
-@app.route('/')
-def index():
-    text = open('dane/xd.txt').read()
-    return render_template("index.html", text=text)
-
-@app.route('/xd')
-def xd():
-    return render_template("xd.html")
-
-
 @app.route('/flaga', methods=["GET", "POST"])
 def flaga():
 	create_folders()
@@ -40,18 +30,21 @@ def flaga():
 def gather_heroes():
 	
 	heroes = [
- 		'Mikołaj Kopernik',
+ 		'Mikołaj Kopernik', 
+ 		'Rotmistrz Pilecki',
+ 		'Maria Skłodowska',
+ 		'Fryderyk Chopin',
+		
+ 		#'Józef Piłsudski'
+ 		#'Tadeusz Kościuszko',
+ 		#'Adam Mickiewicz',
+ 		
+		#'Jan Henryk Dąbrowski',
  		# 'Józef Haller',
  		# 'Władysław Sikorski',
- 		# 'Rotmistrz Pilecki',
- 		# 'Maria Skłodowska',
- 		# 'Fryderyk Chopin',
- 		# 'Tadeusz Kościuszko',
- 		# 'Jan Henryk Dąbrowski',
 		# 'Wojciech Korfanty',
- 		# 'Adam Mickiewicz',
  		# 'Mieczysław Paluch',
- 		 'Józef Piłsudski'
+		
 	]
 
 	greetings = [
