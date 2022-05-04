@@ -5,18 +5,15 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
 
-
 app = Flask(__name__)
 
 app.secret_key = ':)'
-
 
 # Main
 
 @app.route('/')
 def index():
     return render_template("index.html")
-
 
 # Forms
 
@@ -45,13 +42,11 @@ def form_b():
 def form_result():
     return render_template("form_result.html")
 
-
 # Helpers
 
 def save_data(string):
     with open('data/data.txt', "a") as f:
         f.write(string)
-
 
 # Errors
 
@@ -62,7 +57,6 @@ def handle_404(e):
 @app.errorhandler(500)
 def handle_500(e):
     return render_template('500.html'), 500
-
 
 # Form
 
