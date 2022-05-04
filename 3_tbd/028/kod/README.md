@@ -1,6 +1,6 @@
 ## Uruchom
 
-Doinstaluj brakujące biblioteki (wiesz jak) i wewnątrz środowiska:
+Doinstaluj brakujące biblioteki (wiesz jak):
 
 ```
 flask run
