@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>  
+        <br>
+        <br>
+        <br>
+        <h1 style="text-align:center">Zaproponuj ciekawą piosenkę </h1>
+        <br>
+        <br>
+        <form style="text-align:center" action="" method="post">
+        
+            {{ form.csrf_token() }}
+                
+            <p><b>{{ form.tytul_utworu.label }}</b></p>
+            <p>{{ form.tytul_utworu}}</p>
+                
+            <p><b>{{form.typ_utworu.label}}</b></p>
+            <p>{{form.typ_utworu}}</p>
+            
+            <p><b>{{ form.inny_typ.label }}</b></p>
+            <p>{{ form.inny_typ}}</p> 
+
+            <p><b>{{form.wszystko_ok.label}}</b></p>
+            <p>{{form.wszystko_ok}}</p>
+                
+            <p>{{form.button}}</p>
+
+        </form>
+    </div>
+
+{% endblock %}
