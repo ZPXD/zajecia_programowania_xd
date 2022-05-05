@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center">Zadanie domowe formularz</h1>
+    <br>
+    <form action="" method="post">
+        {{ form_zad_dom.csrf_token() }}
+        <p><b>{{ form_zad_dom.form_input_url.label }}</b></p>
+        <p>{{ form_zad_dom.form_input_url }}</p>
+        {% if url_not_valid == 1 %}
+            <span style="background-color: red;color:aliceblue; padding: 6px"> Wpisany adres url ma nieprawidłową składnię </span>
+        {% endif %}
+            
+        <p><b>{{ form_zad_dom.form_checkbox.label }}</b></p>
+        <p>{{ form_zad_dom.form_checkbox }}</p>
+            
+        <p>{{ form_zad_dom.form_submit }}</p>
+
+    </form>
+    
+{% endblock %}

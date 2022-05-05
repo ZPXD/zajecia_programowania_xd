@@ -24,16 +24,26 @@
 
 {% for hero in heroes %}
     
+    <!---
     <div class="hero_image" style="text-align:center">
         <img src="/static/hero_image/{{hero.image}}" align="middle"  width="auto" height="150" >
     </div>
+    -->
 
-    <div class="hero_quote" style="text-align:center">
-        <p>"{{hero.quote}}"</p>
-    </div>
 
     <div class="hero" style="text-align:center">
         <h1>{{ hero.name }}</h1>
+    </div>
+
+    <br>
+
+    <div class="hero-quote" style="text-align:center">
+        <p>"{{hero.quote}}"</p>
+    </div>
+
+    <br>
+
+    <div class="hero-info" style="text-align:center">
         <p>{{ hero.description | safe }}</p>
         <p>{{ hero.url | safe }}</p>
         <br>
