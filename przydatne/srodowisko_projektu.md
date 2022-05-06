@@ -41,7 +41,7 @@ Zapisz wszystkie biblioteki zainstalowane w środowisku do pliku `requirements.t
 pip3 freeze > requirements.txt
 ```
 
-
+Instalacja biblioteki przez `pip3`.
 ```
 pip3 install <nazwa-biblioteki>
 ```
