@@ -24,6 +24,10 @@ source <nazwa_srodowiska>/bin/activate
 deactivate
 ```
 
+#### Wylistuj wszystkie zmienne środowiskowe
+```
+env
+```
 
 #### Przyspieszenie:
 
