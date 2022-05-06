@@ -14,11 +14,13 @@ venv_name+=venv
 python3 -m venv $venv_name
 source $venv_name/bin/activate
 ```
+
 Lub sam zdefiniuj nazwę:
 ```
-python3 -m venv <nazwa_srodowiska>
-source <nazwa_srodowiska>/bin/activate
+python3 -m venv <nazwa_srodowiska>      # Tworzy środowisko
+source <nazwa_srodowiska>/bin/activate  # Aktywuje środowisko
 ```
+
 #### Wyłącz środowisko
 ```
 deactivate
