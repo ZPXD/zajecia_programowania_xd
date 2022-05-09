@@ -1,0 +1,262 @@
+
+from flask import Flask, render_template, redirect, url_for
+import flask_wtf
+from flask_wtf import FlaskForm
+from wtforms import StringField, SelectField, BooleanField, SubmitField
+from wtforms.validators import DataRequired # Validator 1 , czy zostało coś wpisane
+from wtforms.validators import Length # Validator 2 , min i maksymalna ilosc znaków odpowiedzi
+from moje_programy.open_data import open_data # Import własnej funkcji z pliku (patrz koniec)
+
+app=Flask(__name__) 
+app.secret_key=':)'
+
+@app.route('/') 
+def index():
+    return render_template("index.html") 
+
+#Lekcja #26 "Forma A"    
+@app.route('/form_a', methods=["GET", "POST"])
+def form_a():
+
+    form = X()
+    if form.validate_on_submit():
+        
+        github = form.github.data
+        my_github_state = form.my_github_state.data
+        follow_me = form.follow_me.data
+
+        string = '{}\n{}\n{}\n\n'.format(github, my_github_state, follow_me)
+        save_data(string)
+
+        return redirect( url_for('form_result'))
+
+    return render_template("form_a.html", form=form)
+
+
+
+#Praca domowa "Forma B" Kawa czy herbata...
+@app.route('/form_b', methods=["GET", "POST"])
+def form_b():
+    form = Y()
+    if form.validate_on_submit():
+        
+        imie = form.imie.data
+        nazwisko = form.nazwisko.data
+        colubie = form.colubie.data
+
+        string = '{}\n{}\n{}\n\n'.format(imie, nazwisko, colubie)
+        save_data(string)
+
+        return redirect( url_for('form_result'))
+
+    return render_template("form_b.html", form=form)
+
+#Praca domowa "Forma C" Link do muzyki 
+@app.route('/form_c', methods=['GET', 'POST'])
+def form_c():
+    form = Z()
+    if form.validate_on_submit():
+
+        music_link= form.music_link.data
+
+        string = '{}\n\n'.format(music_link)
+        save_data(form.music_link.data)
+
+        return redirect(url_for('form_result'))
+    return render_template("form_c.html", form=form)
+
+# Klasy
+# Klasa Form A demo
+
+class X(FlaskForm):
+    x_options = [
+            ('a','a'),
+            ('a','b'),
+            ('c','c'),
+            ('d','d'),
+    ]
+
+    github = StringField('Twój github:', validators=[DataRequired()])
+    my_github_state = SelectField('Ogarniam githuba na:', choices=x_options)
+    follow_me = BooleanField('Followuj mnie na gitubie :)')
+
+    button = SubmitField('kk')
+
+# Klasa Form B 
+class Y(FlaskForm):
+    y_options = [
+            ('kawa','kawa'),
+            ('herbata','herbata'),
+            ('pepsi','pepsi'),
+            ('mineralna','mineralna'),
+    ]
+
+    imie = StringField('Imie:', validators=[DataRequired()])
+    nazwisko = StringField('Nazwisko:', validators=[DataRequired()])
+    colubie = SelectField('Najlepszy wybor:', choices=y_options)
+
+    button = SubmitField('Potwierdz wybor')
+
+
+# Klasa Form C 
+class Z(FlaskForm):
+    music_link = StringField('Link do dobrej muzyki', validators=[Length(min=5, max=100), DataRequired()])
+    button = SubmitField('Dalej, bo ciekawy juz jestem')
+
+#****************
+# Część wspólna *
+#****************
+
+# Wyświetlnie pliku data/data.txt do którego formularze A, B, C zapisują wproawdzane dane
+@app.route('/form_result')
+def form_result():
+    lista_linii=open_data() # korzystam z funkcji open_data() w pliku moje_programy/open_data.py
+    return render_template("form_result.html", dane=lista_linii) 
+
+
+# Helpers (Funkcja zapisująca do pliku)
+
+def save_data(string):
+    with open('data/data.txt', "a") as f:
+        f.write(string)
+
+
+# Errors (Obsługa błedów)
+
+# Błąd 404 > wyświetl templates/404.html
+@app.errorhandler(404)
+def handle_404(e):
+    return render_template('404.html'), 404
+
+# Błąd 500 > wyświetl templates/500.html
+@app.errorhandler(500)
+def handle_500(e):
+    return render_template('500.html'), 500
+
+
+if __name__=="__main__":
+    app.run()
+
+###################
+# Pliki dodatkowe #
+###################
+
+
+##############
+# Menu Górne #
+##############
+
+#plik : templates/base.html.py
+
+#<div class="navbar-end">
+#  <h2><a href="{{ url_for('index') }}" class="navbar-item">Strona Główna</a>
+#  <a href="{{ url_for('form_a') }}" class="navbar-item">Formularz A</a>
+#  <a href="{{ url_for('form_b') }}" class="navbar-item">Formularz B</a>
+#  <a href="{{ url_for('form_c') }}" class="navbar-item">Formularz C</a>
+#  </h2>
+#</div>
+#
+#<div class="container">
+#  {% block content %} {% endblock %}
+#</div>
+
+#plik : moje_programy/open_data.py
+#def open_data():
+#    text_lines = open('data/data.txt', encoding='utf-8').readlines()
+#
+#    data_lines = []
+#    for line in text_lines:
+#        line = line.strip()
+#        data_lines.append(line)
+#    
+#    return data_lines
+
+###############
+# Formularz B #
+###############
+
+#plik: templates/form_b.html 
+
+#<h4 style="text-align:center">{% extends "base.html" %}</h4>
+#
+#{% block content %}
+#
+#    <div>  
+#        <br>
+#        <br>
+#        <br>
+#        <h1 style="text-align:center">Formularz B Preferencji</h1>
+#        <br>
+#        <br>
+#        <form style="text-align:center" action="" method="post">
+#        
+#            {{ form.csrf_token() }}
+#               
+#            <p><b>{{ form.imie.label }}</b></p>
+#            <p>{{ form.imie}}</p>
+#                
+#            <p><b>{{form.nazwisko.label}}</b></p>
+#            <p>{{form.nazwisko}}</p>
+#                
+#            <p><b>{{form.colubie.label}}</b></p>
+#            <p>{{form.colubie}}</p>
+#                
+#            <p>{{form.button}}</p>
+#        </form>
+#    </div>
+#{% endblock %}
+
+###############
+# Formularz C #
+###############
+
+#plik: templates/form_c.html 
+
+#<h4 style="text-align:center">{% extends "base.html" %}</h4>dzidzi
+#
+#{% block content %}
+#
+#    <div>  
+#        <br>
+#        <br>
+#        <br>
+#        <h1 style="text-align:center">Formularz C Link</h1>
+#        <br>
+#        <br>
+#        <form style="text-align:center" action="" method="post">
+#        
+#            {{ form.csrf_token() }}
+#                
+#            <p><b>{{ form.music_link.label }}</b></p>
+#            <p>{{ form.music_link}}</p> 
+#            <p>{{form.button}}</p>
+#
+#        </form>
+#    </div>
+#
+#{% endblock %}
+
+#####################################
+# Wyświetlnie zapisanych informacji #
+#####################################
+
+#plik: templates/form_result.html 
+
+#<h4 style="text-align:center">{% extends "base.html" %}</h4>
+#
+#{% block content %}
+#
+#    <div>  
+#        <br>
+#        <br>
+#        <br>
+#        <h1 style="text-align:center">Zawartosc pliku</h1>
+#        {% for line in dane %} 
+#        <p>{{line}}</p>
+#        {% endfor %}
+#    </div>
+#
+#{% endblock %}
+
+#zgodnie z Github form_a.html (Podstrona formularza_a)
+#Zgodnie z Github 404.html i 500.html (Podstrony błedów)
