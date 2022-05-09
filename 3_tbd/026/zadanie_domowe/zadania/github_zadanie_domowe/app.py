@@ -18,6 +18,8 @@ def index():
     return render_template("index.html")
 
 
+
+
 # Forms
 
 @app.route('/form_a', methods=["GET", "POST"])
@@ -49,13 +51,7 @@ def form_result():
 # Helpers
 
 def save_data(string):
-    
-    if not 'dane' in os.listdir():
-        os.mkdir('dane')
-        if not 'notatnik.txt' in os.listdir('dane'):
-             os.system('touch notatnik.txt')
-            
-    with open('dane/notatnik.txt', "a+") as f:
+    with open('data/data.txt', "a") as f:
         f.write(string)
 
 
@@ -85,6 +81,8 @@ class X(FlaskForm):
     follow_me = BooleanField('Followuj mnie na gitubie :)')
 
     button = SubmitField('kk')
+
+
 
 
 if __name__=="__main__":
