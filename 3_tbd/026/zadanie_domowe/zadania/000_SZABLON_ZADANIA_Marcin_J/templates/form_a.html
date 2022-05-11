@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>  
+        <br>
+        <br>
+        <br>
+        <h1 style="text-align:center">form a</h1>
+        <br>
+        <br>
+        <form style="text-align:center" action="" method="post">
+        
+            {{ form.csrf_token() }}
+                
+            <p><b>{{ form.github.label }}</b></p>
+            <p>{{ form.github}}</p>
+                
+            <p><b>{{form.my_github_state.label}}</b></p>
+            <p>{{form.my_github_state}}</p>
+                
+            <p><b>{{form.follow_me.label}}</b></p>
+            <p>{{form.follow_me}}</p>
+                
+            <p>{{form.button}}</p>
+
+        </form>
+    </div>
+
+{% endblock %}

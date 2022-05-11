@@ -56,6 +56,11 @@ groups $NEW_USER
 ```
 Wyświetli się: $NEW_USER : $NEW_USER www-data sudo. Jak nie ma sudo i www-data, to pominąłeś krok wyżej.
 
+#### Usuń użytkownika:
+
+```
+deluser <nazwa_uzytkownika>
+```
 
 #### Pozwólmy działać naszemu użytkownikowi bez hasła na serwerze (i tak będziesz łączyć się przez klucz).
 
