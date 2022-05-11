@@ -1,0 +1,15 @@
+<!--
+    
+    
+    KOMENTARZ
+
+
+-->
+
+<h1>Postacie w kolejności ilości słów w opisie: </h1>
+{% for p, o, d, c in opisy_postaci %}
+    <h1>Postać: {{p}}</h1>
+    <p>OPIS: {{o}}</p>
+    <h5>Ile znaów ma opis: {{d}}</h5>
+    <h4>Ile wyrazów ma opis: {{c}}</h4>
+{% endfor %}

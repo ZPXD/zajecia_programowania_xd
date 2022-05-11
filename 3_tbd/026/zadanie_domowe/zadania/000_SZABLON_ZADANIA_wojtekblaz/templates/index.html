@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div>  
+        <br>
+        <br>
+        <br>
+        <h1 style="text-align:center">X</h1>
+        <h2> 
+
+            {% for poem_l in text %}
+            <p>  {{poem_l}}</p>
+            {% endfor %}
+        </h2>
+        <br>
+    </div>
+
+{% endblock %}
