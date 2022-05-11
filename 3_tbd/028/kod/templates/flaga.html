@@ -1,0 +1,53 @@
+<div class="flaga" style="text-align:center">
+    <img src="{{ flaga }}" align="middle">
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="flaga" style="text-align:center">
+    <img src="{{ flaga }}" align="middle">
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="film" style="text-align:center">
+    <iframe width="500" height="303" src="https://www.youtube.com/watch?v=Q88AkN1hNYM"></iframe> 
+</div>
+
+<br>
+<br>
+<br>
+
+{% for hero in heroes %}
+    
+    <!---
+    <div class="hero_image" style="text-align:center">
+        <img src="/static/hero_image/{{hero.image}}" align="middle"  width="auto" height="150" >
+    </div>
+    -->
+
+
+    <div class="hero" style="text-align:center">
+        <h1>{{ hero.name }}</h1>
+    </div>
+
+    <br>
+
+    <div class="hero-quote" style="text-align:center">
+        <p>"{{hero.quote}}"</p>
+    </div>
+
+    <br>
+
+    <div class="hero-info" style="text-align:center">
+        <p>{{ hero.description | safe }}</p>
+        <p>{{ hero.url | safe }}</p>
+        <br>
+        <br>
+    </div>
+
+{% endfor %}
