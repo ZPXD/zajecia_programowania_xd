@@ -14,37 +14,36 @@ app.config['UPLOAD_FOLDER'] = 'static'
 def flaga():
     create_folders()
 
-    # Flag.
-    xd = random.choice(range(22))
-    if len(os.listdir('static/flag_image')) < 10:
-        xd = 11
-    ta_flaga = os.path.join(app.config['UPLOAD_FOLDER'], 'Polska_Flaga__{}.jpg'.format(xd))
+    # Flag. # * Podmianka wyświetlania flag
+    flagi=[]
+    flag_lst = os.listdir('static/flag_image')
+    for _ in range(2):
+        flaga = random.choice(flag_lst)
+        flag_lst.remove(flaga)
+        flagi.append(os.path.join('static/flag_image', flaga))
     
     # Gather heroes.
     heroes = gather_heroes()
     random.shuffle(heroes)
 
-    return render_template("flaga.html", xd=xd, flaga=ta_flaga, heroes=heroes)
+    return render_template("flaga.html", flagi=flagi, heroes=heroes)
 
 def gather_heroes():
     
     heroes = [
-         'Mikołaj Kopernik', 
-         'Rotmistrz Pilecki',
-         'Maria Skłodowska',
-         'Fryderyk Chopin',
-        
-         'Józef Piłsudski'
-         'Tadeusz Kościuszko',
-         'Adam Mickiewicz',
-         
-        #'Jan Henryk Dąbrowski',
-         # 'Józef Haller',
-         # 'Władysław Sikorski',
-        # 'Wojciech Korfanty',
-         # 'Mieczysław Paluch',
-        
-    ]
+        'Mikołaj Kopernik', 
+        'Rotmistrz Pilecki',
+        'Maria Skłodowska',
+        'Fryderyk Chopin',
+        'Józef Piłsudski',
+        'Tadeusz Kościuszko',
+        'Adam Mickiewicz',
+        'Jan Henryk Dąbrowski',
+        'Józef Haller',
+        'Władysław Sikorski',
+        'Wojciech Korfanty',
+        'Mieczysław Paluch',   
+        ]
 
     greetings = [
         'pozdrawia',
@@ -99,12 +98,12 @@ def gather_heroes():
         #hero_str = '11'.join(hero['name'][:-1].split())
         #hero['image'] = '{}_{}.legend'.format(hero_str, photo_nr)
         hero_quotes = open('hero_think/' + hero['name'][:-1] + ".hero").readlines()
-        try:        # ! zastęca cytatu
+        try:        # * zastęca cytatu
             hero['quote'] = random.choice(hero_quotes)
         except IndexError:
             hero['quote'] = 'Kochajcie się, rozmawiajcie ze sobą, wzmacniajcie, rozwijajcie, wspierajcie, wpadajcie robić projekty i krzewcie wszystko co najlepsze'
         hero['description'] = '\n'.join(some_info[2:-1])
-        hero['description'] = ''.join(bold(hero['description']).replace('\n','').replace("−","–").split(" – ")[1:]).capitalize().strip() # ! usunięcie początku opisu
+        hero['description'] = ''.join(bold(hero['description']).replace('\n','').replace("−","–").split(" – ")[1:]).capitalize().strip() # * usunięcie początku opisu
         hero['url'] = some_info[-1]
         heroes.append(hero)
     return heroes
@@ -166,7 +165,8 @@ def hero_think(name):
                 tree = html.fromstring(line)
                 quote = tree.text_content().strip()
                 
-                if not quote.startswith('Opis') and not quote.startswith('Autor') and not quote.startswith('Źródło') and not quote.startswith('Utworzyć'):  # ! naprawa wyłapywania cytatu kiedy taki nie istnieje
+                # * naprawa wyłapywania cytatu kiedy taki nie istnieje
+                if not quote.startswith('Zobacz też:') and not quote.startswith('Autor') and not quote.startswith('Źródło') and not quote.startswith('Utworzyć') and not quote.startswith('Opis'):  
                     f.write(quote + '\n')
                     print('-', quote)
 

@@ -1,18 +1,11 @@
-<div class="flaga" style="text-align:center">
-    <img src="{{ flaga }}" align="middle">
-</div>
+<!-- * Nowe wyświetlanie flag -->
+{% for flaga in flagi %}
+    <div class="flaga" style="text-align:center">
+        <img width="320" height="320" src="{{ flaga }}" align="middle">
+    </div>
 
-<br>
-<br>
-<br>
-
-<div class="flaga" style="text-align:center">
-    <img src="{{ flaga }}" align="middle">
-</div>
-
-<br>
-<br>
-<br>
+    <br><br><br>
+{% endfor %}
 
 <div class="film" style="text-align:center">
     <!-- * Naprawiony film  -->
