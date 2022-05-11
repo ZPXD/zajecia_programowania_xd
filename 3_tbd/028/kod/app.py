@@ -14,7 +14,7 @@ app.config['UPLOAD_FOLDER'] = 'static'
 def flaga():
     create_folders()
 
-    # Flag. # * Podmianka wyświetlania flag
+    #  Flag. # * Podmianka wyświetlania flag
     flagi=[]
     flag_lst = os.listdir('static/flag_image')
     for _ in range(2):
