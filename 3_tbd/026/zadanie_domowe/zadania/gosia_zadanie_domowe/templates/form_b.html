@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div></div>
+        <br>
+        <br>
+        <br>
+        <h1 style="text-align:center">form b</h1>
+        <br>
+        <form style="text-align:center" action="" method="post">
+        
+            {{ form.csrf_token() }}
+                
+            <p><b>{{ form.love_caffe.label }}</b></p>
+            <p>{{ form.love_caffe}}</p>
+                
+            <p><b>{{form.milk.label}}</b></p>
+            <p>{{form.milk}}</p>
+                
+            <p><b>{{form.kind_caffe.label}}</b></p>
+            <p>{{form.kind_caffe}}</p>
+                
+            <p>{{form.button}}</p>
+
+        </form>
+    </div>
+{% endblock %}
