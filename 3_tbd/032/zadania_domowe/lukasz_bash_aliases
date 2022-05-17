@@ -1,0 +1,2 @@
+alias sf='sudo systemctl status flaga'
+alias re='sudo python3 /var/www/flaga/pomocnicze_skrypty/reload.py'
