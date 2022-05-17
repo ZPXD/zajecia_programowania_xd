@@ -1,0 +1,8 @@
+alias yo='echo "<3"'
+alias yeah='flask run'
+alias re='sudo python3 /var/www/flaga/pomocnicze_skrypty/reload.py'
+alias xd='echo "Kochajcie się, rozmawiajcie ze sobą, wzmacniajcie, rozwijajcie, wspierajcie, wpadajcie robić projekty i krzewcie wszystko co najlepsze\n"'
+alias flagas='sudo systemctl status flaga'
+alias flagaenv='source /var/www/flaga/flagaenv/bin/activate; cd /var/www/flaga'
+alias docs='python3 ~/project_starter/scripts/docs.py '
+alias back='sudo python3 ~/git_test/tower_cybersecurity/scripts/backup_preparation.py'
