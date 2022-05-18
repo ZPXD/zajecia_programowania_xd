@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center">form b</h1>
+    <br>
+    <form style="text-align:center" action="" method="post"> 
+        
+        {{ form.csrf_token() }}
+
+        <p><b>{{ form.yt_link.label }}</b></p><br>
+        <p>{{ form.yt_link }}</p><br>
+        {% for error in form.yt_link.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+        <p>{{ form.submit }}</p>
+
+    </form>
+
+{% endblock %}
