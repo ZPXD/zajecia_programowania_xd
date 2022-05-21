@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaką muzykę lubisz?</title>
+</head>
+<body>
+    <div style="text-align:center">  
+        <h1>Jaką muzykę lubisz?</h1>
+        <form style="text-align:center" action="" method="post">
+
+        {{ form.csrf_token() }}
+
+        <p><b>{{ form.wykonawca.label }}</b></p>
+        <p>{{ form.wykonawca}}</p>
+
+        <p><b>{{ form.utwor.label }}</b></p>
+        <p>{{ form.utwor}}</p>
+
+        <p><b>{{ form.kto.label }}</b></p>
+        <p>{{ form.kto}}</p>
+
+        <p>{{form.button}}</p>
+
+        </form>
+    </div>
+</body>
+</html>

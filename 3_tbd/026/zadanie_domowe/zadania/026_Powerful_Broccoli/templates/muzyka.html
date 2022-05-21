@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzyka</title>
+    <style>
+
+        .content{
+            text-align:center
+        }
+
+        table, th, td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        table{
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+<div class="content"> 
+    <p></p><a href="https://maksprojekt.pl/form_music">Dodaj swoje ulubione utwory do listy!</a></p>
+    <table>
+        <tr>
+            <th>Autor</th>
+            <th>Utwór</th>
+            <th>Kiedy dodane</th>
+            <th>Kto dodał</th>
+            <th>Link</th>
+        </tr>
+        {% for data in lst %}
+        <tr>
+            {% for d in data %}
+                {% if 'youtu.be' in d %}
+                    <td>
+                        <form action="{{d}}">
+                            <input type="submit" value="Sprawdź" />
+                        </form>                        
+                    </td>
+                {% else %}
+                    <td>{{d}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
