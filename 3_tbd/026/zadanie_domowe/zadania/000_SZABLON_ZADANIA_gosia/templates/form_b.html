@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align:center">form b</h1>
+    <br>
+    <br>
+    <br>
+    <form style="text-align:center" action="" method="post">
+
+        {{form_h.csrf_token}}
+
+        <p><b>{{form_h.holiday_spot.label}}</b></p>
+        <p>{{form_h.holiday_spot}}</p>
+
+
+        <p><b>{{form_h.holiday_preferences_categorical.label}}</b></p>
+        <p>{{form_h.holiday_preferences_categorical}}</p>
+
+
+        <p><b>{{form_h.holiday_question.label}}</b></p>
+        <p>{{form_h.holiday_question}}</p>
+
+        <p>{{form_h.holiday_button}}</p>
+
+    </form>
+</div>  
+{% endblock %}
