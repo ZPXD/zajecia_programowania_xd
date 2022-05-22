@@ -1,0 +1,5 @@
+https://adres.url
+True
+
+https://adres-kolejny.url
+True
