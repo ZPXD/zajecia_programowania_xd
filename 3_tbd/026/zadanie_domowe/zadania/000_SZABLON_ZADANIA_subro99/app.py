@@ -1,10 +1,10 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, request, session, redirect, url_for
 
 import flask_wtf
 from flask_wtf import FlaskForm
 from wtforms import StringField, SelectField, BooleanField, SubmitField
 from wtforms.validators import DataRequired
-
+import wtforms.validators
 
 app = Flask(__name__)
 
@@ -38,14 +38,28 @@ def form_a():
         return redirect( url_for('form_result'))
 
     return render_template("form_a.html", form=form)
-
-@app.route('/form_b')
+@app.route('/form_b', methods = ["GET","POST"])
 def form_b():
-    return render_template("form_b.html")
+    form = music_form()
+    feedback=""
+    # if request.method == 'POST':
+    #     return redirect(url_for('form_result'))
+    if form.validate_on_submit():
+        message=form.mess_box.data
+        music_type=form.music_type.data
+        # session["message"]=message
+        string = '{} - {}\n'.format(music_type, message)
+        save_data(string)
+        return redirect( url_for('form_result',music_type=music_type))
+  
+    return render_template("form_b.html",form=form)
 
 @app.route('/form_result')
 def form_result():
-    return render_template("form_result.html")
+    # message=session["message"]
+    music_type=request.args["music_type"]
+    return render_template("form_result.html", music_type=music_type)
+
 
 
 # Helpers
@@ -81,6 +95,21 @@ class X(FlaskForm):
     follow_me = BooleanField('Followuj mnie na gitubie :)')
 
     button = SubmitField('kk')
+    
+class music_form(FlaskForm):
+    m_types=[
+        ("Rock", "Rock"),
+        ("POP", "POP"),
+        ("Heavy metal", "Heavy metal"),
+        ("Hip hop", "Hip hop"),
+        ("Disco", "Disco")
+    ]
+
+    mess_box = StringField('Link do muzyki: ', validators=[wtforms.validators.URL(message="Niepoprawny link!")])
+    # mess_box = StringField('Link do muzyki: ', validators=[DataRequired(message="wrong")])
+    music_type= SelectField(label="Typ muzyki", choices=m_types)
+    button = SubmitField('Wyślij')
+
 
 
 
