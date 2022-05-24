@@ -170,10 +170,10 @@ def hero_think(name):
 					print('-', quote)
 
 def create_folders():
-	os.system("mkdir static/hero_image")
-	os.system("mkdir static/flag_image")
-	os.system("mkdir saved_heroes")
-	os.system("mkdir hero_think")
+	os.makedirs("static/hero_image", exist_ok=True)
+	os.makedirs("static/flag_image", exist_ok=True)
+	os.makedirs("saved_heroes", exist_ok=True)
+	os.makedirs("hero_think", exist_ok=True)
 
 
 if __name__ == "__main__":
