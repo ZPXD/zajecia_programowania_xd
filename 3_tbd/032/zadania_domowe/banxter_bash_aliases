@@ -1,0 +1,6 @@
+alias fr='flask run'
+alias rd='sudo python3 pomocnicze_skrypty/reload.py'
+alias sssf='sudo systemctl status flaga'
+alias c='clear'
+alias ld='python3 /home/banxter/temp/project_starter/scripts/docs.py /var/www/flaga/app.py'
+alias bkp='sudo python3 /home/banxter/git_test/tower_cybersecurity/scripts/backup_preparation.py'
