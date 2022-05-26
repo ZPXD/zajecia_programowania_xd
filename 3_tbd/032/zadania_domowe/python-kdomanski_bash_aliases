@@ -1,0 +1,5 @@
+alias fld='cd /var/www/flaga'
+alias flr='sudo python3 /var/www/flaga/reload.py'
+alias fls='sudo systemctl status flaga'
+alias doc='python3 ~/skrypty/docs.py'
+alias backup='sudo sudo python3 /home/backup_preparation.py'
