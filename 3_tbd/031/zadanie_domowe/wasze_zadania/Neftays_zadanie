@@ -1,0 +1,21 @@
+from tower_cybersecurity.scripts.secure_data_hasher import *
+
+import sys
+
+if __name__ == "__main__":
+	try:
+		# Default key.
+		if sys.argv[2] == '--encrypt':
+			file_path = sys.argv[1]
+			encrypt_file(file_path)
+
+		# Named key.
+		if sys.argv[2] == '--decrypt':
+			file_path = sys.argv[1]
+			key_name = sys.argv[3]
+			decrypt_file(file_path, key_name)
+   
+	except IndexError:
+		print('Not enough arguments given')
+		print('File encryption: python my_hasher.py file_path --encrypt')
+		print('File decryption: python my_hasher.py file_path --decrypt unlock_key_path')
