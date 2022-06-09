@@ -7,7 +7,6 @@ from wtforms.validators import DataRequired
 
 
 app = Flask(__name__)
-
 app.secret_key = ':)'
 
 
@@ -39,6 +38,11 @@ def form_a():
 
 @app.route('/form_b')
 def form_b():
+    
+    
+    
+    
+    
     return render_template("form_b.html")
 
 @app.route('/form_result')
@@ -74,7 +78,7 @@ def handle_500(e):
 
 class X(FlaskForm):
     x_options = [
-            ('a','a'),
+            ('AAA','aaaa'),
             ('a','b'),
             ('c','c'),
             ('d','d'),
