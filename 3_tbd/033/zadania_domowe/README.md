@@ -1,3 +1,3 @@
 ## Zadanie domowe
 
-Zadanie.
+TBD.
