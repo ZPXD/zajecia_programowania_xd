@@ -1,0 +1,6 @@
+alias re='sudo python3 /var/www/flaga/pomocnicze_skrypty/reload.py'
+alias sflaga='sudo systemctl status flaga'
+alias dhero='sudo sh c.sh'
+alias cdflaga='cd /var/www/flaga'
+alias ftest='flask run'
+alias sbackup='sudo python3 /home/halcik/tower_cybersecurity/scripts/backup_preparation.py'
