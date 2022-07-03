@@ -1,0 +1,2 @@
+alias xd='echo "Pozdrawiam, Kuba_Gdańsk"'
+alias backup='sudo python3 cybersec/tower_cybersecurity/scripts/backup_preparation.py' 
